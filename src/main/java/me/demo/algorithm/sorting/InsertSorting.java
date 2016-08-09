@@ -7,7 +7,7 @@ import static me.demo.algorithm.sorting.QuikSorting.print;
  * 插入排序算法
  *
  * @author geosmart
- * @复杂度 平方阶 n*(n-1)/2
+ * @复杂度 稳定，时间复杂度 O(n^2)
  * @see [http://visualgo.net/sorting]
  */
 public class InsertSorting {
@@ -38,5 +38,4 @@ public class InsertSorting {
             }
         }
     }
-
 }

@@ -5,7 +5,7 @@ package me.demo.algorithm.sorting;
  * 冒泡排序算法
  *
  * @author geosmart
- * @复杂度 平方阶 n*(n-1)/2
+ * @复杂度 平方阶 n*(n-1)/2，稳定
  * @see [http://visualgo.net/sorting]
  */
 public class BubbleSorting {

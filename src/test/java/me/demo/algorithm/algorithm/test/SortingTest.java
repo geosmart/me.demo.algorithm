@@ -2,7 +2,7 @@ package me.demo.algorithm.algorithm.test;
 
 import org.junit.Test;
 
-import me.demo.algorithm.sorting.BubbleSorting;
+import me.demo.algorithm.sorting.SelectSorting;
 import me.demo.algorithm.sorting.SortingUtil;
 
 import static me.demo.algorithm.sorting.BubbleSorting.bubSort3;
@@ -25,12 +25,17 @@ public class SortingTest {
         SortingUtil.print(list);
     }
 
-
     @Test
     public void test_insertSorting() {
-        int[] list = new int[]{21, 25, 49, 25, 16, 8};
+        int[] list = new int[]{1, 4, 49, 25, 16, 8};
         insertSorting(list);
 
+    }
+
+    @Test
+    public void test_selectSorting() {
+        int[] list = new int[]{5, 3, 1, 4, 2};
+        SelectSorting.selectSorting(list);
     }
 
 
