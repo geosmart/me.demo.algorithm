@@ -1,6 +1,8 @@
 package me.demo.algorithm.sorting;
 
 
+import me.demo.algorithm.util.PrintUtil;
+
 /**
  * 冒泡排序算法
  *
@@ -27,7 +29,7 @@ public class BubbleSorting {
                     arr[i] = arr[j];
                     arr[j] = temp;
                     swapped = true;
-                    SortingUtil.print(arr);
+                    PrintUtil.print(arr);
                 }
             }
             System.out.println("---\n");
@@ -49,7 +51,7 @@ public class BubbleSorting {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    SortingUtil.print(arr);
+                    PrintUtil.print(arr);
                 }
             }
         }
@@ -70,7 +72,7 @@ public class BubbleSorting {
                     int tmp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = tmp;
-                    SortingUtil.print(arr);
+                    PrintUtil.print(arr);
                 }
             }
         }

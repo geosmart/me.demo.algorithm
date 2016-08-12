@@ -1,6 +1,8 @@
 package me.demo.algorithm.sorting;
 
 
+import me.demo.algorithm.util.PrintUtil;
+
 /**
  * 数组常用算法
  * 
@@ -17,9 +19,9 @@ public class ArrayAlgorithm {
    */
   public static void main(String args[]) {
 	int[] arr = new int[] {5, 3, 1, 4, 2};
-	SortingUtil.print(arr);
+	PrintUtil.print(arr);
 	reverse(arr);
-	  SortingUtil.print(arr);
+	  PrintUtil.print(arr);
   }
 
 

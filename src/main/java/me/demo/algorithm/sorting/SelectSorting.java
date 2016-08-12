@@ -1,6 +1,8 @@
 package me.demo.algorithm.sorting;
 
 
+import me.demo.algorithm.util.PrintUtil;
+
 /**
  * 选择排序算法
  *
@@ -13,7 +15,7 @@ public class SelectSorting {
      * 选择排序
      */
     public static void selectSorting(int[] arr) {
-        SortingUtil.print(arr);
+        PrintUtil.print(arr);
         // repeat (numOfElements - 1) times
         for (int i = 0; i < arr.length - 1; i++) {
             System.out.println("minimum- " + arr[i]);
@@ -33,7 +35,7 @@ public class SelectSorting {
             int temp = arr[i];
             arr[i] = arr[currentMinIndex];
             arr[currentMinIndex] = temp;
-            SortingUtil.print(arr);
+            PrintUtil.print(arr);
         }
     }
 }

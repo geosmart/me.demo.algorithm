@@ -1,10 +1,10 @@
-package me.demo.algorithm.sorting;
+package me.demo.algorithm.util;
 
 
 /**
  * @author geosmart
  */
-public class SortingUtil {
+public class PrintUtil {
 
     public static void print(int[] list) {
         String str = "";
@@ -13,5 +13,9 @@ public class SortingUtil {
         }
         System.out.println(str);
         System.out.println("---");
+    }
+
+    public static void print(Object  num) {
+        System.out.println(num);
     }
 }
