@@ -12,7 +12,4 @@ public class SortingUtil {
         arr[j] = temp;
     }
 
-    public static void print(Object num) {
-        System.out.println(num);
-    }
 }

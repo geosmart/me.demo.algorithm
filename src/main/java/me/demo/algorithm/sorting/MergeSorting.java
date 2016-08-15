@@ -35,40 +35,41 @@ public class MergeSorting {
         }
 
         //recursion sorting
-        int[] leftPartion_sorted = mergeSorting(leftPartion);
-        int[] rightPartion_sorted = mergeSorting(rightPartion);
+        leftPartion = mergeSorting(leftPartion);
+        rightPartion = mergeSorting(rightPartion);
 
         System.out.println("array---");
-        PrintUtil.print(leftPartion_sorted);
-        PrintUtil.print(rightPartion_sorted);
+        PrintUtil.print(leftPartion);
+        PrintUtil.print(rightPartion);
 
-        int[] result = new int[leftPartion_sorted.length + rightPartion_sorted.length];
-//        merging the 2 small ordered arrays into a big one
-        System.out.println("merge---");
+        //merging the 2 small ordered arrays into a big
+        int[] mergePartion = new int[leftPartion.length + rightPartion.length];
         int leftIndex = 0;
         int rightIndex = 0;
-
-        for (int i = 0; i < result.length; i++) {
-            if (leftIndex == leftPartion_sorted.length) {
-                //result后面的都用rightPartion_sorted填充
-                result[i] = rightPartion_sorted[rightIndex];
+        int mergeIndex = 0;
+        while (mergeIndex < mergePartion.length) {
+            if (leftIndex == leftPartion.length) {
+                //后续都用rightPartion填充
+                mergePartion[mergeIndex] = rightPartion[rightIndex];
                 rightIndex++;
-            } else if (rightIndex == rightPartion_sorted.length) {
-                //result后面的都用leftPartion_sorted填充
-                result[i] = leftPartion_sorted[leftIndex];
+            } else if (rightIndex == rightPartion.length) {
+                //后续都用leftPartion填充
+                mergePartion[mergeIndex] = leftPartion[leftIndex];
                 leftIndex++;
             } else {
-                if (leftPartion_sorted[leftIndex] < rightPartion_sorted[rightIndex]) {
-                    result[i] = leftPartion_sorted[leftIndex];
+                //每次取leftPartion和rightPartion中最小的copy到mergePartion中
+                if (leftPartion[leftIndex] < rightPartion[rightIndex]) {
+                    mergePartion[mergeIndex] = leftPartion[leftIndex];
                     leftIndex++;
                 } else {
-                    result[i] = rightPartion_sorted[rightIndex];
+                    mergePartion[mergeIndex] = rightPartion[rightIndex];
                     rightIndex++;
                 }
             }
+            mergeIndex++;
         }
-        PrintUtil.print("result---");
-        PrintUtil.print(result);
-        return result;
+        System.out.println("merge---");
+        PrintUtil.print(mergePartion);
+        return mergePartion;
     }
 }

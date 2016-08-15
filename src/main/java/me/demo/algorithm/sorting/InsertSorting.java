@@ -1,7 +1,8 @@
 package me.demo.algorithm.sorting;
 
 
-import static me.demo.algorithm.sorting.QuikSorting.print;
+import me.demo.algorithm.util.PrintUtil;
+import me.demo.algorithm.util.SortingUtil;
 
 /**
  * 插入排序算法
@@ -28,11 +29,11 @@ public class InsertSorting {
                     System.out.println("move sorted element to the right by 1");
                     arr[j + 1] = arr[j];
                     arr[j] = extractedItem;
-                    print(arr);
+                    PrintUtil.print(arr);
                 } else {
                     System.out.println("insert extracted element");
                     arr[j + 1] = extractedItem;
-                    print(arr);
+                    PrintUtil.print(arr);
                     break;
                 }
             }
