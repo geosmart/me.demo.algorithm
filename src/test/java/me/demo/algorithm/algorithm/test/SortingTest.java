@@ -6,7 +6,6 @@ import me.demo.algorithm.sorting.MergeSorting;
 import me.demo.algorithm.sorting.QuikSorting;
 import me.demo.algorithm.sorting.SelectSorting;
 import me.demo.algorithm.util.PrintUtil;
-import me.demo.algorithm.util.SortingUtil;
 
 import static me.demo.algorithm.sorting.BubbleSorting.bubSort3;
 import static me.demo.algorithm.sorting.InsertSorting.insertSorting;
@@ -49,8 +48,10 @@ public class SortingTest {
     @Test
     public void test_quikSorting() {
         int[] list1 = new int[]{6, 1, 2, 7, 9, 3, 4, 5, 10, 8};
-//        int[] list1 = new int[]{3, 1, 2, 5, 4, 6};
-        new QuikSorting().sort(list1);
+        QuikSorting.quicksort2(list1, 0, list1.length - 1);
+//        QuikSorting.quicksort(list1, 0, list1.length - 1);
+//        QuikSorting.quicksort_desc(list1, 0, list1.length - 1);
+        PrintUtil.print(list1);
     }
 
 }
