@@ -10,7 +10,7 @@ import me.demo.algorithm.util.PrintUtil;
  * @复杂度 稳定，时间复杂度 O(n^2)
  * @see [http://visualgo.net/sorting]
  */
-public class SelectSorting {
+public class SelectSort {
     /**
      * 选择排序
      */

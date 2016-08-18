@@ -12,7 +12,7 @@ import me.demo.algorithm.util.PrintUtil;
  * @thought 将 2 个大小为 N/2 的已排序序列合并为一个 N 元素已排序序列仅需要 N 次操作。这个方法叫做合并。
  * @see [http://visualgo.net/sorting]
  */
-public class MergeSorting {
+public class MergeSort {
     /**
      * 合并排序算法
      * 1)拆分阶段，将序列分为更小的序列

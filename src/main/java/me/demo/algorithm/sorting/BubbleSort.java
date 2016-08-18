@@ -10,7 +10,7 @@ import me.demo.algorithm.util.PrintUtil;
  * @复杂度 平方阶 n*(n-1)/2，稳定
  * @see [http://visualgo.net/sorting]
  */
-public class BubbleSorting {
+public class BubbleSort {
 
     /**
      * 冒泡排序，直接排序，性能较差

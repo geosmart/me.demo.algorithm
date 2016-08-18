@@ -11,7 +11,7 @@ import me.demo.algorithm.util.SortingUtil;
  * @复杂度 稳定，时间复杂度 O(n^2)
  * @see [http://visualgo.net/sorting]
  */
-public class InsertSorting {
+public class InsertSort {
     /**
      * 直接插入排序
      */

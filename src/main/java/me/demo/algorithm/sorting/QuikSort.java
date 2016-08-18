@@ -15,7 +15,7 @@ import me.demo.algorithm.util.SortingUtil;
  * @4 合并拆分交换结果
  * @see [http://visualgo.net/sorting],[http://developer.51cto.com/art/201403/430986.htm]
  */
-public class QuikSorting {
+public class QuikSort {
 
     /**
      * 快速排序-asc
