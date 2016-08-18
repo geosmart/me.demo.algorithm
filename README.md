@@ -4,10 +4,11 @@
 ## InsertSort   插入排序
 ## MergeSort    合并排序
 ## SelectSort   选择排序
-## Quick    
+## QuickSort    快速排序    
 ## R-Quick
 ## CountingSort 计数排序
-## Radix    
+## Radix        基数排序   
+## BucketSort   桶排序   
 
 # Search 查找算法
 ## 顺序查找

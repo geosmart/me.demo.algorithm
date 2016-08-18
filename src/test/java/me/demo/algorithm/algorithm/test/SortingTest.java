@@ -58,7 +58,7 @@ public class SortingTest {
     @Test
     public void test_countingSort() {
         int[] list1 = new int[]{6, 1, 2, 7, 9, 3, 4, 5, 10, 8};
-        list1 = new int[]{2, 3, 8, 7, 1, 2, 2, 2, 7, 3, 9, 8, 2, 1, 4, 2, 4, 6, 9, 2};
+        list1 = new int[]{20, 3, 8, 7, 1, 2, 2, 2, 7, 3, 9, 8, 2, 1, 4, 2, 4, 6, 9, 2};
         CountingSort.countingSort(list1);
         PrintUtil.print(list1);
     }

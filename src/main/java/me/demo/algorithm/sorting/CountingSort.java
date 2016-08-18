@@ -24,8 +24,6 @@ public class CountingSort {
         int max = a[0], min = a[0];
         for (int i = 1; i < a.length; i++) {
             max = (a[i] > max) ? a[i] : max;
-        }
-        for (int i = 1; i < a.length; i++) {
             min = (a[i] < min) ? a[i] : min;
         }
         PrintUtil.print("range ( " + min + " , " + max + " )");
