@@ -5,6 +5,7 @@ import org.junit.Test;
 import me.demo.algorithm.sorting.CountingSort;
 import me.demo.algorithm.sorting.MergeSort;
 import me.demo.algorithm.sorting.QuikSort;
+import me.demo.algorithm.sorting.RadixSort;
 import me.demo.algorithm.sorting.SelectSort;
 import me.demo.algorithm.util.PrintUtil;
 
@@ -60,6 +61,15 @@ public class SortingTest {
         int[] list1 = new int[]{6, 1, 2, 7, 9, 3, 4, 5, 10, 8};
         list1 = new int[]{20, 3, 8, 7, 1, 2, 2, 2, 7, 3, 9, 8, 2, 1, 4, 2, 4, 6, 9, 2};
         CountingSort.countingSort(list1);
+        PrintUtil.print(list1);
+    }
+
+    @Test
+    public void test_radixSort() {
+        int[] list1 = new int[]{3221, 1, 10, 9680, 577, 9420, 7, 5622, 4793, 2030, 3138, 82, 2599, 743, 4127};
+//        int[] list1 = new int[]{3221, 1, 10, 342, 58, 576, 4127};
+//        list1 = new int[]{342, 58, 576, 356};
+        RadixSort.radixSort(list1);
         PrintUtil.print(list1);
     }
 }

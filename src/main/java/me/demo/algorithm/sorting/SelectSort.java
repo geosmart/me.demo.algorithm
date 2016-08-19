@@ -23,7 +23,7 @@ public class SelectSort {
             int currentMinIndex = i;
             // set the first unsorted element as the minimum
             for (int j = i + 1; j < arr.length - 1; j++) {
-                System.out.println("index- "+j + ", element > currentMinimum：" + arr[j + 1] + " < " + arr[currentMinIndex]);
+                System.out.println("index- " + j + ", element > currentMinimum：" + arr[j + 1] + " < " + arr[currentMinIndex]);
                 //element < currentMinimum
                 if (arr[j + 1] < arr[currentMinIndex]) {
                     //set element as new minItem

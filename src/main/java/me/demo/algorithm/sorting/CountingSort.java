@@ -11,7 +11,7 @@ import me.demo.algorithm.util.PrintUtil;
  * 4)反向填充目标数组：将每个元素t放在新数组的第C(t)项，每放一个元素就将C(t)减去1
  *
  * @author geosmart
- * @complex O(n), 当输入的元素是 n 个 0 到 k 之间的整数时，它的运行时间是 Θ(n + k)。
+ * @复杂度 O(n), 当输入的元素是 n 个 0 到 k 之间的整数时，它的运行时间是 Θ(n + k)。
  * @优点 稳定, 因为其待排序元素本身就含有了定位特征，因而不需要比较就可以确定其前后位置,不适合按字母顺序排序人名。
  * @缺点 计数排序对于数据范围很大的数组，需要大量时间和内存，适用性不高。例如：计数排序是用来排序0到100之间的数字的最好的算法
  * @应用场景 投票时记票
@@ -43,10 +43,12 @@ public class CountingSort {
         //restore array
         int cIndex = 0;
         for (int i = 0; i < a.length; i++) {
+            //counting over ,do next
             while (c[cIndex] == 0) {
                 cIndex++;
             }
             a[i] = min + cIndex;
+            //count -1
             c[cIndex] = c[cIndex] - 1;
         }
     }

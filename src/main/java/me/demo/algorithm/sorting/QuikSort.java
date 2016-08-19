@@ -7,7 +7,7 @@ import me.demo.algorithm.util.SortingUtil;
  * 快速排序（Quicksort）又称划分交换排序（partition-exchange sort）
  *
  * @author geosmart
- * @complex 在平均状况下，排序n个项目要Ο(n logn)次比较。在最坏状况下则需要Ο(n2)次比较，但这种状况并不常见。 事实上，快速排序通常明显比其他Ο(n log
+ * @复杂度 在平均状况下，排序n个项目要Ο(n logn)次比较。在最坏状况下则需要Ο(n2)次比较，但这种状况并不常见。 事实上，快速排序通常明显比其他Ο(n log
  * n)算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。
  * @1 设置pivot索引，默认第一个；
  * @2 根据pivot的值进行交换拆分（比pivot小的放在左边，其他放在右边）；
