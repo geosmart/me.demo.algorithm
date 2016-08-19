@@ -2,6 +2,7 @@ package me.demo.algorithm.algorithm.test;
 
 import org.junit.Test;
 
+import me.demo.algorithm.sorting.BucketSort;
 import me.demo.algorithm.sorting.CountingSort;
 import me.demo.algorithm.sorting.MergeSort;
 import me.demo.algorithm.sorting.QuikSort;
@@ -70,6 +71,16 @@ public class SortingTest {
 //        int[] list1 = new int[]{3221, 1, 10, 342, 58, 576, 4127};
 //        list1 = new int[]{342, 58, 576, 356};
         RadixSort.radixSort(list1);
+        PrintUtil.print(list1);
+    }
+
+
+    @Test
+    public void test_bucketSort() {
+        int[] list1 = new int[]{3221, 1, 10, 9680, 577, 9420, 7, 5622, 4793, 2030, 3138, 82, 2599, 743, 4127};
+//        int[] list1 = new int[]{29, 25, 3, 49, 9, 37};
+//        list1 = new int[]{342, 58, 576, 356};
+        BucketSort.bucketSort(list1);
         PrintUtil.print(list1);
     }
 }
