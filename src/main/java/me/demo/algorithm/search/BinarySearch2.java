@@ -1,6 +1,5 @@
-import java.util.PriorityQueue;
-
-public class BinarySearch {
+package me.demo.algorithm.search;
+public class BinarySearch2 {
 
     public static void main(String[] args) {
         int[] srcList = new int[]{10, 11, 13, 14, 14, 15, 16, 17, 18, 112, 112, 123};

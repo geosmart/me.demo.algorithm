@@ -36,7 +36,7 @@ public class BucketSort {
 //        int bucketCount = Double.valueOf(Math.ceil((max - min) / step)).intValue();
         List<List<Integer>> buckets = new ArrayList<>();
         for (int i = 0; i < a.length; i++) {
-            buckets.add(i, new ArrayList<>());
+            buckets.add(i, new ArrayList<Integer>());
         }
 
         //分桶
