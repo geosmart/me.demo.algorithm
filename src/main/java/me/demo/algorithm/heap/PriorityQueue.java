@@ -246,13 +246,17 @@ public class PriorityQueue<E> extends AbstractQueue<E>
     private void initElementsFromCollection(Collection<? extends E> c) {
         Object[] a = c.toArray();
         // If c.toArray incorrectly doesn't return Object[], copy it.
-        if (a.getClass() != Object[].class)
+        if (a.getClass() != Object[].class) {
             a = Arrays.copyOf(a, a.length, Object[].class);
+        }
         int len = a.length;
-        if (len == 1 || this.comparator != null)
-            for (int i = 0; i < len; i++)
-                if (a[i] == null)
+        if (len == 1 || this.comparator != null) {
+            for (Object o : a) {
+                if (o == null) {
                     throw new NullPointerException();
+                }
+            }
+        }
         this.queue = a;
         this.size = a.length;
     }
@@ -613,16 +617,18 @@ public class PriorityQueue<E> extends AbstractQueue<E>
         // assert i >= 0 && i < size;
         modCount++;
         int s = --size;
-        if (s == i) // removed last element
+        // removed last element
+        if (s == i) {
             queue[i] = null;
-        else {
+        } else {
             E moved = (E) queue[s];
             queue[s] = null;
             siftDown(i, moved);
             if (queue[i] == moved) {
                 siftUp(i, moved);
-                if (queue[i] != moved)
+                if (queue[i] != moved) {
                     return moved;
+                }
             }
         }
         return null;
@@ -641,10 +647,11 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * @param x the item to insert
      */
     private void siftUp(int k, E x) {
-        if (comparator != null)
+        if (comparator != null) {
             siftUpUsingComparator(k, x);
-        else
+        } else {
             siftUpComparable(k, x);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -653,8 +660,9 @@ public class PriorityQueue<E> extends AbstractQueue<E>
         while (k > 0) {
             int parent = (k - 1) >>> 1;
             Object e = queue[parent];
-            if (key.compareTo((E) e) >= 0)
+            if (key.compareTo((E) e) >= 0) {
                 break;
+            }
             queue[k] = e;
             k = parent;
         }
@@ -666,8 +674,9 @@ public class PriorityQueue<E> extends AbstractQueue<E>
         while (k > 0) {
             int parent = (k - 1) >>> 1;
             Object e = queue[parent];
-            if (comparator.compare(x, (E) e) >= 0)
+            if (comparator.compare(x, (E) e) >= 0) {
                 break;
+            }
             queue[k] = e;
             k = parent;
         }
@@ -694,19 +703,29 @@ public class PriorityQueue<E> extends AbstractQueue<E>
     @SuppressWarnings("unchecked")
     private void siftDownComparable(int k, E x) {
         Comparable<? super E> key = (Comparable<? super E>) x;
-        int half = size >>> 1;        // loop while a non-leaf
+        int half = size >>> 1;
+        //二叉树结构，下标大于size/2都是叶子节点，其他的节点都有子节点。
+        //直到k没有子节点：loop while a non-leaf
         while (k < half) {
-            int child = (k << 1) + 1; // assume left child is least
-            Object c = queue[child];
+            //假设left节点为child中的最小值节点
+            int child = (k << 1) + 1;
             int right = child + 1;
-            if (right < size &&
-                    ((Comparable<? super E>) c).compareTo((E) queue[right]) > 0)
+            Object c = queue[child];
+            //right没超过数组大小，且right<left，则最小为right
+            if (right < size && ((Comparable<? super E>) c).compareTo((E) queue[right]) > 0) {
                 c = queue[child = right];
-            if (key.compareTo((E) c) <= 0)
+            }
+            //如果parent节点<min(left,right),则不需要swap
+            if (key.compareTo((E) c) <= 0) {
                 break;
+            }
+            //否则swap parent节点和min(left,right)的节点
             queue[k] = c;
+            //当前父节点取最小值的index
             k = child;
         }
+        //当前节点赋值到n轮swap后的最小值
+        //或者当前节点没有子节点，则k是叶子节点的下标，没有比它更小的了，直接赋值即可
         queue[k] = key;
     }
 
