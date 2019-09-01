@@ -15,55 +15,23 @@ import java.util.Spliterator;
 import java.util.function.Consumer;
 
 /**
- * An unbounded priority {@linkplain Queue queue} based on a priority heap.
- * The elements of the priority queue are ordered according to their
- * {@linkplain Comparable natural ordering}, or by a {@link Comparator}
- * provided at queue construction time, depending on which constructor is
- * used.  A priority queue does not permit {@code null} elements.
- * A priority queue relying on natural ordering also does not permit
- * insertion of non-comparable objects (doing so may result in
- * {@code ClassCastException}).
- *
- * <p>The <em>head</em> of this queue is the <em>least</em> element
- * with respect to the specified ordering.  If multiple elements are
- * tied for least value, the head is one of those elements -- ties are
- * broken arbitrarily.  The queue retrieval operations {@code poll},
- * {@code remove}, {@code peek}, and {@code element} access the
- * element at the head of the queue.
- *
- * <p>A priority queue is unbounded, but has an internal
- * <i>capacity</i> governing the size of an array used to store the
- * elements on the queue.  It is always at least as large as the queue
- * size.  As elements are added to a priority queue, its capacity
- * grows automatically.  The details of the growth policy are not
- * specified.
- *
- * <p>This class and its iterator implement all of the
- * <em>optional</em> methods of the {@link Collection} and {@link
- * Iterator} interfaces.  The Iterator provided in method {@link
- * #iterator()} is <em>not</em> guaranteed to traverse the elements of
- * the priority queue in any particular order. If you need ordered
- * traversal, consider using {@code Arrays.sort(pq.toArray())}.
- *
- * <p><strong>Note that this implementation is not synchronized.</strong>
- * Multiple threads should not access a {@code PriorityQueue}
- * instance concurrently if any of the threads modifies the queue.
- * Instead, use the thread-safe {@link
- * java.util.concurrent.PriorityBlockingQueue} class.
- *
- * <p>Implementation note: this implementation provides
- * O(log(n)) time for the enqueuing and dequeuing methods
- * ({@code offer}, {@code poll}, {@code remove()} and {@code add});
- * linear time for the {@code remove(Object)} and {@code contains(Object)}
- * methods; and constant time for the retrieval methods
- * ({@code peek}, {@code element}, and {@code size}).
- *
- * <p>This class is a member of the
- * <a href="{@docRoot}/../technotes/guides/collections/index.html">
- * Java Collections Framework</a>.
+ * >* An `unbounded priority queue` based on a `priority heap`.
+ * >* The elements of the priority queue are ordered according to their `natural ordering`, or by a `Comparator provided` at queue >construction time, depending on which constructor is used.
+ * >* A priority queue does `not permit null elements`.
+ * >* A priority queue relying on natural ordering also does `not permit insertion of non-comparable objects` (doing so may result in >ClassCastException).
+ * >* The `head of this queue` is the `least element` with respect to the `specified ordering`. If multiple elements are tied for >least value, the head is one of those elements -- ties are broken arbitrarily.
+ * >* The queue retrieval operations `poll`, `remove`, `peek`, and element access the element at the head of the queue.
+ * >* `A priority queue is unbounded`, but has an `internal capacity` governing the size of an `array` used to store the elements on >the queue. It is always at least as large as the queue size. As elements are added to a priority queue, its `capacity grows >automatically`. The details of the growth policy are not specified.
+ * >* This class and its iterator implement all of the optional methods of the `Collection and Iterator interfaces`.
+ * >* The Iterator provided in method iterator() is `not guaranteed` to traverse the elements of the priority queue in any particular >`order`. If you need ordered traversal, consider using `Arrays.sort(pq.toArray())`.
+ * >* Note that this implementation is `not synchronized`. Multiple threads should not access a PriorityQueue instance concurrently if >any of the threads modifies the queue. Instead, use the `thread-safe PriorityBlockingQueue` class.
+ * >* Implementation note: this implementation provides
+ * >    * `O(log(n)) time` for the `enqueuing` and `dequeuing` methods (`offer, poll, remove() and add`);
+ * >    * `linear time` for the `remove(Object) and contains(Object)` methods;
+ * >    * `constant time` for the retrieval methods (`peek, element, and size`).
+ * >This class is a member of the `Java Collections Framework`.
  *
  * @param <E> the type of elements held in this collection
- *
  * @author Josh Bloch, Doug Lea
  * @since 1.5
  */
@@ -116,7 +84,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * {@linkplain Comparable natural ordering}.
      *
      * @param initialCapacity the initial capacity for this priority queue
-     *
      * @throws IllegalArgumentException if {@code initialCapacity} is less
      *                                  than 1
      */
@@ -131,7 +98,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * @param comparator the comparator that will be used to order this
      *                   priority queue.  If {@code null}, the {@linkplain Comparable
      *                   natural ordering} of the elements will be used.
-     *
      * @since 1.8
      */
     public PriorityQueue(Comparator<? super E> comparator) {
@@ -146,7 +112,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * @param comparator      the comparator that will be used to order this
      *                        priority queue.  If {@code null}, the {@linkplain Comparable
      *                        natural ordering} of the elements will be used.
-     *
      * @throws IllegalArgumentException if {@code initialCapacity} is
      *                                  less than 1
      */
@@ -170,7 +135,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      *
      * @param c the collection whose elements are to be placed
      *          into this priority queue
-     *
      * @throws ClassCastException   if elements of the specified collection
      *                              cannot be compared to one another according to the priority
      *                              queue's ordering
@@ -201,7 +165,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      *
      * @param c the priority queue whose elements are to be placed
      *          into this priority queue
-     *
      * @throws ClassCastException   if elements of {@code c} cannot be
      *                              compared to one another according to {@code c}'s
      *                              ordering
@@ -221,7 +184,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      *
      * @param c the sorted set whose elements are to be placed
      *          into this priority queue
-     *
      * @throws ClassCastException   if elements of the specified sorted
      *                              set cannot be compared to one another according to the
      *                              sorted set's ordering
@@ -282,19 +244,22 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      */
     private void grow(int minCapacity) {
         int oldCapacity = queue.length;
-        // Double size if small; else grow by 50%
-        int newCapacity = oldCapacity + ((oldCapacity < 64) ?
-                (oldCapacity + 2) :
-                (oldCapacity >> 1));
-        // overflow-conscious code
+        // Double size if size<64; else grow by 50%
+        int newCapacity = oldCapacity + (
+                (oldCapacity < 64) ? (oldCapacity + 2) : (oldCapacity >> 1)
+        );
+        // overflow-conscious code 防越界
         if (newCapacity - MAX_ARRAY_SIZE > 0)
             newCapacity = hugeCapacity(minCapacity);
+        //将queue中数据复制到扩容后的queue
         queue = Arrays.copyOf(queue, newCapacity);
     }
 
     private static int hugeCapacity(int minCapacity) {
-        if (minCapacity < 0) // overflow
+        // overflow
+        if (minCapacity < 0) {
             throw new OutOfMemoryError();
+        }
         return (minCapacity > MAX_ARRAY_SIZE) ?
                 Integer.MAX_VALUE :
                 MAX_ARRAY_SIZE;
@@ -304,7 +269,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * Inserts the specified element into this priority queue.
      *
      * @return {@code true} (as specified by {@link Collection#add})
-     *
      * @throws ClassCastException   if the specified element cannot be
      *                              compared with elements currently in this priority queue
      *                              according to the priority queue's ordering
@@ -318,29 +282,36 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * Inserts the specified element into this priority queue.
      *
      * @return {@code true} (as specified by {@link Queue#offer})
-     *
      * @throws ClassCastException   if the specified element cannot be
      *                              compared with elements currently in this priority queue
      *                              according to the priority queue's ordering
      * @throws NullPointerException if the specified element is null
      */
     public boolean offer(E e) {
-        if (e == null)
+        if (e == null) {
             throw new NullPointerException();
+        }
+        //修改次数+1
         modCount++;
         int i = size;
-        if (i >= queue.length)
+        if (i >= queue.length) {
+            //队列已满时，动态扩容
             grow(i + 1);
+        }
         size = i + 1;
-        if (i == 0)
+        if (i == 0) {
+            //队列为空时
             queue[0] = e;
-        else
+        } else {
+            //上浮调整堆顺序
             siftUp(i, e);
+        }
         return true;
     }
 
     @SuppressWarnings("unchecked")
     public E peek() {
+        //返回堆顶元素
         return (size == 0) ? null : (E) queue[0];
     }
 
@@ -362,15 +333,16 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * result of the call).
      *
      * @param o element to be removed from this queue, if present
-     *
      * @return {@code true} if this queue changed as a result of the call
      */
     @Override
     public boolean remove(Object o) {
+        //是否存在元素
         int i = indexOf(o);
         if (i == -1) {
             return false;
         } else {
+            //移除制定index的元素
             removeAt(i);
             return true;
         }
@@ -381,7 +353,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * Needed by iterator.remove.
      *
      * @param o element to be removed from this queue, if present
-     *
      * @return {@code true} if removed
      */
     boolean removeEq(Object o) {
@@ -400,7 +371,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * at least one element {@code e} such that {@code o.equals(e)}.
      *
      * @param o object to be checked for containment in this queue
-     *
      * @return {@code true} if this queue contains the specified element
      */
     public boolean contains(Object o) {
@@ -447,16 +417,14 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * allocated array of {@code String}:
      *
      * <pre> {@code String[] y = x.toArray(new String[0]);}</pre>
-     *
+     * <p>
      * Note that {@code toArray(new Object[0])} is identical in function to
      * {@code toArray()}.
      *
      * @param a the array into which the elements of the queue are to
      *          be stored, if it is big enough; otherwise, a new array of the
      *          same runtime type is allocated for this purpose.
-     *
      * @return an array containing all of the elements in this queue
-     *
      * @throws ArrayStoreException  if the runtime type of the specified array
      *                              is not a supertype of the runtime type of every element in
      *                              this queue
@@ -505,7 +473,7 @@ public class PriorityQueue<E> extends AbstractQueue<E>
          * that require a siftup instead of a siftdown.)  We must visit all of
          * the elements in this list to complete the iteration.  We do this
          * after we've completed the "normal" iteration.
-         *
+         * <p>
          * We expect that most iterations, even those involving removals,
          * will not need to store elements in this field.
          */
@@ -586,43 +554,59 @@ public class PriorityQueue<E> extends AbstractQueue<E>
     public E poll() {
         if (size == 0)
             return null;
-        int s = --size;
+        //queue修改次数+1
         modCount++;
+        //堆顶元素
         E result = (E) queue[0];
+
+        //堆尾索引
+        int s = --size;
+        //堆尾元素
         E x = (E) queue[s];
+        //置空堆尾元素
         queue[s] = null;
-        if (s != 0)
+        if (s != 0) {
+            //堆尾元素拿出作为堆顶值后，从堆顶执行下沉
             siftDown(0, x);
+        }
+        //返回堆顶元素
         return result;
     }
 
     /**
      * Removes the ith element from queue.
-     *
+     * <p>
      * Normally this method leaves the elements at up to i-1,
-     * inclusive, untouched.  Under these circumstances, it returns
-     * null.  Occasionally, in order to maintain the heap invariant,
-     * it must swap a later element of the list with one earlier than
-     * i.  Under these circumstances, this method returns the element
-     * that was previously at the end of the list and is now at some
-     * position before i. This fact is used by iterator.remove so as to
-     * avoid missing traversing elements.
+     * inclusive, untouched.  Under these circumstances, it returns null.
+     * Occasionally, in order to maintain the heap invariant,
+     * it must swap a later element of the list with one earlier thani.
+     * Under these circumstances,
+     * this method returns the element that was previously at the end of the list and is now at some position before i.
+     * This fact is used by iterator.remove so as to avoid missing traversing elements.
      */
     @SuppressWarnings("unchecked")
     private E removeAt(int i) {
-        // assert i >= 0 && i < size;
+        assert i >= 0 && i < size;
+        // 修改次数+1
         modCount++;
+        // 堆尾元素Index
         int s = --size;
-        if (s == i) // removed last element
+        if (s == i) {
+            //如果删除的是堆尾元素，不需要进行siftUp
             queue[i] = null;
-        else {
+        } else {
+            //拿出堆尾元素
             E moved = (E) queue[s];
             queue[s] = null;
+            //将堆尾元素放到要删除的元素的位置，并执行siftDown
             siftDown(i, moved);
+            //siftDown后，若元素没有改变，可能是因为要删除的结点和堆尾结点是跨子树，或者要删除的结点是叶子结点
             if (queue[i] == moved) {
+                //如果删除的元素和堆尾元素不在一个子树，需要siftUp操作
                 siftUp(i, moved);
-                if (queue[i] != moved)
+                if (queue[i] != moved) {
                     return moved;
+                }
             }
         }
         return null;
@@ -632,7 +616,7 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * Inserts item x at position k, maintaining heap invariant by
      * promoting x up the tree until it is greater than or equal to
      * its parent, or is the root.
-     *
+     * <p>
      * To simplify and speed up coercions and comparisons. the
      * Comparable and Comparator versions are separated into different
      * methods that are otherwise identical. (Similarly for siftDown.)
@@ -641,23 +625,32 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * @param x the item to insert
      */
     private void siftUp(int k, E x) {
-        if (comparator != null)
+        if (comparator != null) {
             siftUpUsingComparator(k, x);
-        else
+        } else {
             siftUpComparable(k, x);
+        }
     }
 
     @SuppressWarnings("unchecked")
     private void siftUpComparable(int k, E x) {
         Comparable<? super E> key = (Comparable<? super E>) x;
+        //从当前节点循环上浮到堆顶节点
         while (k > 0) {
+            //k节点的父节点索引
             int parent = (k - 1) >>> 1;
+            //k节点的父节点值
             Object e = queue[parent];
-            if (key.compareTo((E) e) >= 0)
+            //比较k节点与父节点的值大小，父节点值较小时，终止遍历
+            if (key.compareTo((E) e) >= 0) {
                 break;
+            }
+            //父节点值较大时，交换k节点与父节点值
             queue[k] = e;
+            //当前节点移到父节点，继续向上遍历
             k = parent;
         }
+        //将当前节点值赋给交换后的父节点
         queue[k] = key;
     }
 
@@ -692,22 +685,33 @@ public class PriorityQueue<E> extends AbstractQueue<E>
     }
 
     @SuppressWarnings("unchecked")
-    private void siftDownComparable(int k, E x) {
-        Comparable<? super E> key = (Comparable<? super E>) x;
-        int half = size >>> 1;        // loop while a non-leaf
-        while (k < half) {
-            int child = (k << 1) + 1; // assume left child is least
-            Object c = queue[child];
-            int right = child + 1;
-            if (right < size &&
-                    ((Comparable<? super E>) c).compareTo((E) queue[right]) > 0)
-                c = queue[child = right];
-            if (key.compareTo((E) c) <= 0)
+    private void siftDownComparable(int parent, E x) {
+        Comparable<? super E> parentVal = (Comparable<? super E>) x;
+        int half = size >>> 1;
+        //二叉树结构，下标大于size/2都是叶子节点，其他的节点都有子节点。
+        //循环直到k没有子节点：loop while a non-leaf
+        while (parent < half) {
+            //假设left节点为child中的最小值节点
+            int left = (parent << 1) + 1;
+            int right = left + 1;
+            Object minVal = queue[left];
+            //存在right，且right<left，则最小为right
+            if (right < size && ((Comparable<? super E>) minVal).compareTo((E) queue[right]) > 0) {
+                left = right;
+                minVal = queue[right];
+            }
+            //如果parent节点<min(left,right),则不需要swap
+            if (parentVal.compareTo((E) minVal) <= 0) {
                 break;
-            queue[k] = c;
-            k = child;
+            }
+            //否则swap parent节点和min(left,right)的节点
+            queue[parent] = minVal;
+            //当前父节点取最小值的index继续loop
+            parent = left;
         }
-        queue[k] = key;
+        //1.当前节点没有子节点，则k是叶子节点的下标，没有比它更小的了，直接赋值即可
+        //2.当前节点下沉n轮后，将节点的值放到最终不需要再交换的位置（没有比它更小的或者到达叶子节点）
+        queue[parent] = parentVal;
     }
 
     @SuppressWarnings("unchecked")
@@ -759,7 +763,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * Saves this queue to a stream (that is, serializes it).
      *
      * @param s the stream
-     *
      * @serialData The length of the array backing the instance is
      * emitted (int), followed by all of its elements
      * (each an {@code Object}) in the proper order.
@@ -814,7 +817,6 @@ public class PriorityQueue<E> extends AbstractQueue<E>
      * characteristic values.
      *
      * @return a {@code Spliterator} over the elements in this queue
-     *
      * @since 1.8
      */
     public final Spliterator<E> spliterator() {
@@ -831,7 +833,9 @@ public class PriorityQueue<E> extends AbstractQueue<E>
         private int fence;            // -1 until first use
         private int expectedModCount; // initialized when fence set
 
-        /** Creates new spliterator covering the given range */
+        /**
+         * Creates new spliterator covering the given range
+         */
         PriorityQueueSpliterator(PriorityQueue<E> pq, int origin, int fence,
                                  int expectedModCount) {
             this.pq = pq;
