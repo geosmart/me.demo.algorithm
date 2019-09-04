@@ -2,8 +2,6 @@ package me.demo.algorithm.algorithm.test;
 
 import com.alibaba.fastjson.JSON;
 
-import me.demo.algorithm.heap.HeapPrinter;
-import me.demo.algorithm.heap.PriorityHeap;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -35,25 +33,25 @@ public class PriorityQueueTest {
 
     @Test
     public void test_topK() {
-        int k = 10000;
+        int k = 100;
+//        List<Integer> array = Arrays.asList(11, 0, 9, 8, 6, 1, 4, 5, 3, 2, 7);
         List<Integer> array = Arrays.asList(numbers(1000000));
 
         PriorityQueue topKQueue = new PriorityQueue();
         for (int i = 0; i < array.size(); i++) {
             int o = array.get(i);
-            Object min = topKQueue.peek();
             if (topKQueue.size() < k) {
+                //一直加到K
                 topKQueue.add(o);
-            } else if (topKQueue.size() >= k && min != null && o > (int) min) {
-                //最小堆大小超过K且当前元素比堆顶大时，移除堆顶元素，并加入新元素
-                topKQueue.poll();
-                System.out.println(String.format("pop min %s", i));
-                topKQueue.add(o);
-//                HeapPrinter.dump(topKQueue.toArray());
             } else {
-                System.out.println(String.format("skip %s", o));
+                Object min = topKQueue.peek();
+                if (o > (int) min) {
+                    //最小堆大小超过K且当前元素比堆顶大时，移除堆顶元素，并加入新元素
+                    topKQueue.poll();
+                    topKQueue.add(o);
+                }
             }
         }
-        HeapPrinter.dump(topKQueue.toArray());
+        //HeapPrinter.dump(topKQueue.toArray());
     }
 }
