@@ -319,11 +319,15 @@ public class PriorityBlockingQueue<E> extends AbstractQueue<E>
      */
     private E dequeue() {
         int n = size - 1;
+        //没元素返回空
         if (n < 0) {
             return null;
         } else {
+            //拿出队头元素，用于返回
             Object[] array = queue;
             E result = (E) array[0];
+
+            //将队尾元素放到队头，并从队头开始执行siftDown
             E x = (E) array[n];
             array[n] = null;
             Comparator<? super E> cmp = comparator;
@@ -569,13 +573,17 @@ public class PriorityBlockingQueue<E> extends AbstractQueue<E>
     @Override
     public E take() throws InterruptedException {
         final ReentrantLock lock = this.lock;
+        //上锁，可中断
         lock.lockInterruptibly();
         E result;
         try {
+            //阻塞直到队列返回结果
             while ((result = dequeue()) == null) {
+                //阻塞等待恢复信号
                 notEmpty.await();
             }
         } finally {
+            //解锁
             lock.unlock();
         }
         return result;
@@ -588,7 +596,9 @@ public class PriorityBlockingQueue<E> extends AbstractQueue<E>
         lock.lockInterruptibly();
         E result;
         try {
+            //阻塞直到队列返回结果，或者等待超时
             while ((result = dequeue()) == null && nanos > 0) {
+                //阻塞等待恢复信号（超时时间）
                 nanos = notEmpty.awaitNanos(nanos);
             }
         } finally {
