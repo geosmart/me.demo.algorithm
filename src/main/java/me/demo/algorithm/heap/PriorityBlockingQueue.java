@@ -342,9 +342,7 @@ public class PriorityBlockingQueue<E> extends AbstractQueue<E>
     }
 
     /**
-     * Inserts item x at position k, maintaining heap invariant by
-     * promoting x up the tree until it is greater than or equal to
-     * its parent, or is the root.
+     * Inserts item x at position k, maintaining heap invariant by  promoting x up the tree until it is greater than or equal to  its parent, or is the root.
      *
      * To simplify and speed up coercions and comparisons. the
      * Comparable and Comparator versions are separated into different
@@ -385,34 +383,41 @@ public class PriorityBlockingQueue<E> extends AbstractQueue<E>
     }
 
     /**
-     * Inserts item x at position k, maintaining heap invariant by
-     * demoting x down the tree repeatedly until it is less than or
-     * equal to its children or is a leaf.
+     * Inserts item x at position k, maintaining heap invariant by demoting x down the tree repeatedly
+     * until it is less than or equal to its children or is a leaf.
      *
      * @param k     the position to fill
      * @param x     the item to insert
      * @param array the heap array
      * @param n     heap size
      */
-    private static <T> void siftDownComparable(int k, T x, Object[] array,
-                                               int n) {
+    private static <T> void siftDownComparable(int k, T x, Object[] array, int n) {
         if (n > 0) {
+            //拿出父节点值
             Comparable<? super T> key = (Comparable<? super T>) x;
-            int half = n >>> 1;           // loop while a non-leaf
+            //存在叶子节点时 loop while a non-leaf
+            int half = n >>> 1;
             while (k < half) {
-                int child = (k << 1) + 1; // assume left child is least
+                // assume left child is least
+                int child = (k << 1) + 1;
+                //最小值
                 Object c = array[child];
                 int right = child + 1;
+                //存在right且right比left大
                 if (right < n &&
                         ((Comparable<? super T>) c).compareTo((T) array[right]) > 0) {
                     c = array[child = right];
                 }
+                //父节点比最小值小，不需要交换，终止loop
                 if (key.compareTo((T) c) <= 0) {
                     break;
                 }
+                //父节点值以最小值替换
                 array[k] = c;
+                //父节点移到最小值位置
                 k = child;
             }
+            //父节点值，最终赋给交换n轮后的叶子节点
             array[k] = key;
         }
     }
@@ -672,8 +677,8 @@ public class PriorityBlockingQueue<E> extends AbstractQueue<E>
     private void removeAt(int i) {
         Object[] array = queue;
         int n = size - 1;
-        if (n == i) // removed last element
-        {
+        // removed last element
+        if (n == i) {
             array[i] = null;
         } else {
             E moved = (E) array[n];
