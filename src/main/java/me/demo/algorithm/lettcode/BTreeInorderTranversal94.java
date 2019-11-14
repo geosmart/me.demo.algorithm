@@ -22,30 +22,68 @@ import java.util.List;
 class BTreeInorderTranversal94 {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
-        TreeNode right = new TreeNode(2);
-        TreeNode left = new TreeNode(3);
-        root.right = right;
-        right.left = left;
+        TreeNode l1_left = new TreeNode(2);
+        TreeNode l2_left_left = new TreeNode(4);
+        TreeNode l2_left_right = new TreeNode(5);
 
-        BTreeInorderTranversal94 solution = new BTreeInorderTranversal94();
-        List<Integer> res = solution.inorderTraversal(root);
+
+        TreeNode l1_right = new TreeNode(3);
+        TreeNode l2_right_left = new TreeNode(6);
+        TreeNode l2_right_right = new TreeNode(7);
+        TreeNode l3_right_left_left = new TreeNode(8);
+        TreeNode l3_right_left_right = new TreeNode(9);
+
+        root.left = l1_left;
+        root.right = l1_right;
+        l1_left.left = l2_left_left;
+        l1_left.right = l2_left_right;
+        l1_right.left = l2_right_left;
+        l1_right.right = l2_right_right;
+        l2_right_left.left = l3_right_left_left;
+        l2_right_left.right = l3_right_left_right;
+
+        List<Integer> res = inorderTraversal(root);
         System.out.println(JSON.toJSONString(res));
     }
 
-    /**
-     * Definition for a binary tree node.
-     */
-    public static class TreeNode {
-        int val;
-        public TreeNode left;
-        public TreeNode right;
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> nodes = new ArrayList<>();
+        traversalTreeInOrder(nodes, root);
+        return nodes;
+    }
 
-        TreeNode(int x) {
-            val = x;
+    /***
+     * 子树遍历
+     * @param nodes 遍历结果数组
+     * @param root 根节点
+     */
+    public void traversalTreeInOrder(List<Integer> nodes, TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        System.out.println(String.format("sub_root[%s],nodes:%s", root.val, JSON.toJSONString(nodes)));
+        if (root.left != null) {
+            //左子树遍历
+            traversalTreeInOrder(nodes, root.left);
+        }
+        //根节点
+        nodes.add(root.val);
+        if (root.right != null) {
+            //右子树遍历
+            traversalTreeInOrder(nodes, root.right);
         }
     }
 
-    public List<Integer> inorderTraversal(TreeNode root) {
-        return null;
+    /***
+     * 树节点
+     */
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int val) {
+            this.val = val;
+        }
     }
 }
