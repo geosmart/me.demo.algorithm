@@ -15,10 +15,10 @@ import java.util.Map;
  * 因为 nums[0] + nums[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  */
-class TwoSum {
+class TwoSum1 {
 
     public static void main(String[] args) {
-        TwoSum s = new TwoSum();
+        TwoSum1 s = new TwoSum1();
         int[] nums = new int[]{2, 7, 11, 15};
         System.out.println(JSON.toJSONString(s.twoSum1(nums, 9)));
         System.out.println(JSON.toJSONString(s.twoSum2(nums, 9)));
