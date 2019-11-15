@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 给定一个二叉树，返回它的中序 遍历。
@@ -42,13 +43,35 @@ class BTreeInorderTranversal94 {
         l2_right_left.left = l3_right_left_left;
         l2_right_left.right = l3_right_left_right;
 
-        List<Integer> res = inorderTraversal(root);
-        System.out.println(JSON.toJSONString(res));
+        List<Integer> nodes = new ArrayList<>();
+        traversalTreeInOrder_recurse(nodes, root);
+        System.out.println(JSON.toJSONString(nodes));
+        nodes = traversalTreeInOrder_stack(root);
+        System.out.println(JSON.toJSONString(nodes));
     }
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+
+    /***
+     * 子树遍历
+     * @param root 根节点
+     */
+    public static List<Integer> traversalTreeInOrder_stack(TreeNode root) {
         List<Integer> nodes = new ArrayList<>();
-        traversalTreeInOrder(nodes, root);
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode curr = root;
+        //遍历所有路径，直到某条路径没有叶子节点or栈已空时，结束遍历
+        while (curr != null || !stack.isEmpty()) {
+            //树遍历左子树并入栈，到叶子节点停止
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+            //叶子节点出栈
+            curr = stack.pop();
+            nodes.add(curr.val);
+            //当前节点，从右子树遍历
+            curr = curr.right;
+        }
         return nodes;
     }
 
@@ -57,33 +80,38 @@ class BTreeInorderTranversal94 {
      * @param nodes 遍历结果数组
      * @param root 根节点
      */
-    public void traversalTreeInOrder(List<Integer> nodes, TreeNode root) {
+    public static void traversalTreeInOrder_recurse(List<Integer> nodes, TreeNode root) {
         if (root == null) {
             return;
         }
         System.out.println(String.format("sub_root[%s],nodes:%s", root.val, JSON.toJSONString(nodes)));
         if (root.left != null) {
             //左子树遍历
-            traversalTreeInOrder(nodes, root.left);
+            traversalTreeInOrder_recurse(nodes, root.left);
         }
         //根节点
         nodes.add(root.val);
         if (root.right != null) {
             //右子树遍历
-            traversalTreeInOrder(nodes, root.right);
+            traversalTreeInOrder_recurse(nodes, root.right);
         }
     }
 
     /***
      * 树节点
      */
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
 
         TreeNode(int val) {
             this.val = val;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(val);
         }
     }
 }
