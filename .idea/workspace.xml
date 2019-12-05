@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="update-linkedList find divide node">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle141.java" afterDir="false" />
+    <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle142.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,19 +32,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/SingleLinkedList19.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle141.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="41">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle141.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle142.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+            <state relative-caret-position="342">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,6 +202,7 @@
         <option value="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/SingleLinkedList19.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListMiddleNode876.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle141.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle142.java" />
       </list>
     </option>
   </component>
@@ -213,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -362,6 +365,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -506,7 +510,8 @@
       <workItem from="1575081973314" duration="13941000" />
       <workItem from="1575158180131" duration="2034000" />
       <workItem from="1575330241975" duration="1701000" />
-      <workItem from="1575375075329" duration="6774000" />
+      <workItem from="1575375075329" duration="6831000" />
+      <workItem from="1575504985422" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="update-PriorityQueue source code comment">
       <created>1566651439817</created>
@@ -550,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575204299110</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update-linkedList find cycle">
+      <created>1575381873032</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575381873047</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -586,7 +598,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73351000" />
+    <option name="totallyTimeSpent" value="73625000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -606,10 +618,10 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4992722" visible="true" weight="0.25281692" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4992722" visible="true" weight="0.25633803" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22266667" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28666666" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28666666" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.19066666" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -680,7 +692,8 @@
     <MESSAGE value="update-btree tranversal in order bt stack" />
     <MESSAGE value="update-linkedList delete last K node" />
     <MESSAGE value="update-linkedList find divide node" />
-    <option name="LAST_COMMIT_MESSAGE" value="update-linkedList find divide node" />
+    <MESSAGE value="update-linkedList find cycle" />
+    <option name="LAST_COMMIT_MESSAGE" value="update-linkedList find cycle" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -752,7 +765,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Programs/java/java8/src.zip!/javax/swing/tree/TreeNode.java" />
     <entry file="jar://D:/Programs/java/java8/src.zip!/java/lang/System.java" />
     <entry file="jar://D:/Programs/java/java8/src.zip!/java/util/PriorityQueue.java" />
     <entry file="jar://D:/Programs/java/java8/src.zip!/java/lang/Comparable.java" />
@@ -1182,8 +1194,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle141.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        <state relative-caret-position="41">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle142.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
