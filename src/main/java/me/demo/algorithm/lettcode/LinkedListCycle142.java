@@ -12,14 +12,49 @@ import java.util.Set;
  */
 class LinkedListCycle142 {
     public static void main(String[] args) {
-//        int[] array = new int[]{3, 2, 0, 4};
+        int[] array = new int[]{3, 2, 0, 4};
 //        int[] array = new int[]{1};
-        int[] array = new int[]{1, 2};
+//        int[] array = new int[]{1, 2};
 //        int[] array = new int[]{};
 
         ListNode head = newSingleLinkedList(array, true);
         ListNode cycleStartNode = detectCycle(head);
-        System.out.println(cycleStartNode);
+        if (cycleStartNode != null) {
+            System.out.println(cycleStartNode.val);
+        }
+    }
+
+    /**
+     * Floyd求链表中环的入口节点
+     * 1.定义快慢指针求相遇点，快指针比慢指针快2倍；
+     * 2.在相遇点，定义1个指针从头，1个指针从相遇点，一起开始逐步前进，下次相遇点即为环入口；
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
+     *
+     * @param head 链表头节点
+     * @return 是否循环链表
+     */
+    public static ListNode detectCycle(ListNode head) {
+        if (head == null || head.next == null) {
+            return null;
+        }
+        //寻找相遇
+        ListNode slow = head.next;
+        ListNode fast = head.next.next;
+        while (slow != fast) {
+            if (fast == null || fast.next == null) {
+                return null;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //寻找环入口
+        ListNode meetSlow = head;
+        while (meetSlow != fast) {
+            fast = fast.next;
+            meetSlow = meetSlow.next;
+        }
+        return meetSlow;
     }
 
     /**
@@ -31,7 +66,7 @@ class LinkedListCycle142 {
      * @param head 链表头节点
      * @return 是否循环链表
      */
-    public static ListNode detectCycle(ListNode head) {
+    public static ListNode detectCycle2(ListNode head) {
         Set<ListNode> nodes = new HashSet<>();
         while (head != null) {
             if (nodes.contains(head)) {
@@ -66,8 +101,7 @@ class LinkedListCycle142 {
         }
         if (cycle) {
 //            nodes[nodes.length - 1].next = nodes[0];
-//            nodes[nodes.length - 1].next = nodes[1];
-            nodes[nodes.length - 1].next = nodes[0];
+            nodes[nodes.length - 1].next = nodes[1];
         }
         return nodes[0];
     }
