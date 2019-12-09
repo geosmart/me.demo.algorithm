@@ -1,11 +1,16 @@
 package me.demo.algorithm.lettcode;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Stack;
 
 /**
- *
+ * 反转一个单链表。
+ * 示例:
+ * 输入: 1->2->3->4->5->NULL
+ * 输出: 5->4->3->2->1->NULL
+ * 进阶:
+ * 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
+ * 来源：力扣（LeetCode）
+ * 链接：https://leetcode-cn.com/problems/reverse-linked-list
  */
 class LinkedListRevert206 {
     public static void main(String[] args) {
@@ -15,7 +20,7 @@ class LinkedListRevert206 {
 //        int[] array = new int[]{};
 
         ListNode head = newSingleLinkedList(array, false);
-        ListNode cycleStartNode = reverseList(head);
+        ListNode cycleStartNode = reverseList2(head);
         if (cycleStartNode != null) {
             System.out.println(cycleStartNode.val);
         }
@@ -32,13 +37,15 @@ class LinkedListRevert206 {
         ListNode pre = null;
         //当前节点
         ListNode cur = head;
+        //临时节点
+        ListNode tmp = null;
         while (cur != null) {
-            //临时下一个节点
-            ListNode tmp = cur.next;
+            //后续节点的指针
+            tmp = cur.next;
             //当前节点的next指向上一个节点->反转
             cur.next = pre;
             //上一个节点=当前节点
-            pre=cur;
+            pre = cur;
             //下一次从当前节点开始，新的链表引用
             cur = tmp;
         }
@@ -61,9 +68,10 @@ class LinkedListRevert206 {
     public static ListNode reverseList2(ListNode head) {
         //链表遍历指针
         ListNode p = head;
+        ListNode tmp = null;
         while (p != null && p.next != null) {
             //删除next，指向next.next
-            ListNode tmp = p.next;
+            tmp = p.next;
             p.next = p.next.next;
             //插入next，指向头
             tmp.next = head;

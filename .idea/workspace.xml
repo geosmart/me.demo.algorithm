@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle142.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle142.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="162">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -220,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -369,6 +367,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -515,7 +514,8 @@
       <workItem from="1575589880359" duration="238000" />
       <workItem from="1575721565307" duration="2551000" />
       <workItem from="1575796837861" duration="8415000" />
-      <workItem from="1575812246814" duration="1869000" />
+      <workItem from="1575812246814" duration="1897000" />
+      <workItem from="1575900088471" duration="1949000" />
     </task>
     <task id="LOCAL-00001" summary="update-PriorityQueue source code comment">
       <created>1566651439817</created>
@@ -566,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575381873047</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update-linkedList reverse">
+      <created>1575814135205</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575814135205</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -602,7 +609,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86698000" />
+    <option name="totallyTimeSpent" value="88675000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,11 +629,11 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4992722" visible="true" weight="0.27042255" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4992722" visible="true" weight="0.27394366" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22266667" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28666666" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.33733332" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.42266667" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32933334" />
@@ -697,7 +704,8 @@
     <MESSAGE value="update-linkedList delete last K node" />
     <MESSAGE value="update-linkedList find divide node" />
     <MESSAGE value="update-linkedList find cycle" />
-    <option name="LAST_COMMIT_MESSAGE" value="update-linkedList find cycle" />
+    <MESSAGE value="update-linkedList reverse" />
+    <option name="LAST_COMMIT_MESSAGE" value="update-linkedList reverse" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -707,9 +715,6 @@
         <watch expression="queue[right]" language="JAVA" />
         <watch expression="size" language="JAVA" />
         <watch expression="key" language="JAVA" />
-      </configuration>
-      <configuration name="Application">
-        <watch expression="stack.peek()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -1223,8 +1228,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="162">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
