@@ -14,13 +14,13 @@ import java.util.Stack;
  */
 class LinkedListRevert206 {
     public static void main(String[] args) {
-        int[] array = new int[]{3, 2, 0, 4};
+        int[] array = new int[]{1, 2, 3, 4};
 //        int[] array = new int[]{1};
 //        int[] array = new int[]{1, 2};
 //        int[] array = new int[]{};
 
         ListNode head = newSingleLinkedList(array, false);
-        ListNode cycleStartNode = reverseList2(head);
+        ListNode cycleStartNode = reverseList(head);
         if (cycleStartNode != null) {
             System.out.println(cycleStartNode.val);
         }
@@ -32,7 +32,7 @@ class LinkedListRevert206 {
      * @param head 链表头节点
      * @return 反转后链表头节点
      */
-    public static ListNode reverseList(ListNode head) {
+    public static ListNode reverseList1(ListNode head) {
         //上一个节点
         ListNode pre = null;
         //当前节点
@@ -109,6 +109,27 @@ class LinkedListRevert206 {
             newHead = newHead.next;
         }
         return cur;
+    }
+
+    /**
+     * 递归实现
+     * 时间复杂度：O(n)，假设 n 是列表的长度，那么时间复杂度为 O(n)。
+     * 空间复杂度：O(n)，由于使用递归，将会使用隐式栈空间。递归深度可能会达到 n 层。
+     *
+     * @param head 链表头节点
+     * @return 反转后链表头节点
+     */
+    public static ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        //p为最后一个节点
+        ListNode p = reverseList(head.next);
+        //反转
+        head.next.next = head;
+        //当前next设为null，防止循环指针
+        head.next = null;
+        return p;
     }
 
     /***

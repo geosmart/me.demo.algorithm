@@ -31,104 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle142.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/HeapTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/Hash算法-二叉树中序遍历.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="5" selection-start-line="5" selection-end-line="5" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/program/java/src.zip!/javax/swing/tree/TreeNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/program/java/src.zip!/javax/swing/text/AbstractDocument.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30618">
-              <caret line="1763" column="26" selection-start-line="1763" selection-start-column="26" selection-end-line="1763" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/BTreeVerticalOrderTranversa987.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/program/java/src.zip!/java/util/LinkedHashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2448">
-              <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/program/java/src.zip!/java/util/HashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9936">
-              <caret line="595" column="19" selection-start-line="595" selection-start-column="19" selection-end-line="595" selection-end-column="19" />
-              <folding>
-                <element signature="e#23630#23631#0" expanded="true" />
-                <element signature="e#23684#23685#0" expanded="true" />
-                <element signature="e#71651#71652#0" expanded="true" />
-                <element signature="e#71733#71734#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/program/java/src.zip!/java/util/LinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+            <state relative-caret-position="74">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -515,7 +422,8 @@
       <workItem from="1575721565307" duration="2551000" />
       <workItem from="1575796837861" duration="8415000" />
       <workItem from="1575812246814" duration="1897000" />
-      <workItem from="1575900088471" duration="1949000" />
+      <workItem from="1575900088471" duration="2566000" />
+      <workItem from="1575988673226" duration="934000" />
     </task>
     <task id="LOCAL-00001" summary="update-PriorityQueue source code comment">
       <created>1566651439817</created>
@@ -573,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575814135205</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update-linkedList reverse">
+      <created>1575902054777</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575902054778</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -609,7 +524,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88675000" />
+    <option name="totallyTimeSpent" value="90226000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,7 +544,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4992722" visible="true" weight="0.27394366" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4992722" visible="true" weight="0.27746478" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22266667" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28666666" />
@@ -708,6 +623,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="update-linkedList reverse" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="Arrays.asList(array)" language="JAVA" />
@@ -1187,7 +1118,7 @@
     </entry>
     <entry file="jar://D:/program/java/src.zip!/javax/swing/text/AbstractDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30618">
+        <state relative-caret-position="30546">
           <caret line="1763" column="26" selection-start-line="1763" selection-start-column="26" selection-end-line="1763" selection-end-column="26" />
         </state>
       </provider>
@@ -1228,8 +1159,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="74">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
         </state>
       </provider>
     </entry>
