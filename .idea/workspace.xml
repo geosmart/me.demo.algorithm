@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="">
+    <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="update-linkedList add,remove">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +31,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="342">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding>
+                <element signature="e#2380#2381#0" expanded="true" />
+                <element signature="e#2418#2419#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,6 +125,7 @@
         <option value="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListCycle142.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java" />
       </list>
     </option>
   </component>
@@ -309,7 +323,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LinkedListRevert206">
+  <component name="RunManager" selected="Application.MyLinkedList">
     <configuration name="LinkedListCycle141" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.LinkedListCycle141" />
       <module name="me.demo.algorithm" />
@@ -362,8 +376,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingleLinkedList19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.SingleLinkedList19" />
+    <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.MyLinkedList" />
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
@@ -377,11 +391,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyLinkedList" />
         <item itemvalue="Application.LinkedListRevert206" />
         <item itemvalue="Application.LinkedListCycle142" />
         <item itemvalue="Application.LinkedListCycle141" />
         <item itemvalue="Application.LinkedListMiddleNode876" />
-        <item itemvalue="Application.SingleLinkedList19" />
       </list>
     </recent_temporary>
   </component>
@@ -423,7 +437,9 @@
       <workItem from="1575796837861" duration="8415000" />
       <workItem from="1575812246814" duration="1897000" />
       <workItem from="1575900088471" duration="2566000" />
-      <workItem from="1575988673226" duration="934000" />
+      <workItem from="1575988673226" duration="1026000" />
+      <workItem from="1576021934852" duration="1283000" />
+      <workItem from="1576236793053" duration="1549000" />
     </task>
     <task id="LOCAL-00001" summary="update-PriorityQueue source code comment">
       <created>1566651439817</created>
@@ -488,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575902054778</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update-linkedList reverse">
+      <created>1575989618374</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575989618374</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -524,7 +547,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90226000" />
+    <option name="totallyTimeSpent" value="93150000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,11 +567,11 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4992722" visible="true" weight="0.27746478" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4992722" visible="true" weight="0.28450704" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22266667" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28666666" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.42266667" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.38533333" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32933334" />
@@ -620,7 +643,8 @@
     <MESSAGE value="update-linkedList find divide node" />
     <MESSAGE value="update-linkedList find cycle" />
     <MESSAGE value="update-linkedList reverse" />
-    <option name="LAST_COMMIT_MESSAGE" value="update-linkedList reverse" />
+    <MESSAGE value="update-linkedList add,remove" />
+    <option name="LAST_COMMIT_MESSAGE" value="update-linkedList add,remove" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -636,6 +660,12 @@
           <line>130</line>
           <properties />
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -708,7 +738,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Programs/java/java8/src.zip!/java/lang/Comparable.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/RecursionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1159,8 +1188,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListRevert206.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="342">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="e#2380#2381#0" expanded="true" />
+            <element signature="e#2418#2419#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
