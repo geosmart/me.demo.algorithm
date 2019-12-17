@@ -1,5 +1,8 @@
 package me.demo.algorithm.lettcode;
 
+import me.demo.algorithm.lettcode.linkedlist.ListNode;
+import me.demo.algorithm.lettcode.linkedlist.SingleLinkkedList;
+
 import java.util.Stack;
 
 /**
@@ -19,10 +22,10 @@ class LinkedListRevert206 {
 //        int[] array = new int[]{1, 2};
 //        int[] array = new int[]{};
 
-        ListNode head = newSingleLinkedList(array, false);
+        ListNode head = new SingleLinkkedList(array).getHead();
         ListNode cycleStartNode = reverseList(head);
         if (cycleStartNode != null) {
-            System.out.println(cycleStartNode.val);
+            cycleStartNode.printNode();
         }
     }
 
@@ -132,53 +135,4 @@ class LinkedListRevert206 {
         return p;
     }
 
-    /***
-     * 根据数组构建链表
-     * @param vals 数组
-     * @param cycle 是否循环链表
-     * @return 链表头节点
-     */
-    public static ListNode newSingleLinkedList(int[] vals, boolean cycle) {
-        if (vals.length == 0) {
-            return null;
-        }
-        ListNode[] nodes;
-        nodes = new ListNode[vals.length];
-        for (int i = 0; i < vals.length; i++) {
-            if (nodes[i] == null) {
-                nodes[i] = new ListNode(vals[i]);
-            }
-            if (i < vals.length - 1) {
-                nodes[i + 1] = new ListNode(vals[i + 1]);
-                nodes[i].next = nodes[i + 1];
-            }
-        }
-        if (cycle) {
-//            nodes[nodes.length - 1].next = nodes[0];
-            nodes[nodes.length - 1].next = nodes[1];
-        }
-        return nodes[0];
-    }
-
-    /***
-     * 单链表节点
-     */
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val) {
-            this.val = val;
-        }
-
-        public void printNode() {
-            ListNode printNode = this;
-            StringBuilder sb = new StringBuilder();
-            while (printNode != null) {
-                sb.append("-->").append(printNode.val);
-                printNode = printNode.next;
-            }
-            System.out.println(sb);
-        }
-    }
 }

@@ -1,5 +1,7 @@
 package me.demo.algorithm.lettcode;
 
+import me.demo.algorithm.lettcode.linkedlist.ListNode;
+
 /**
  * 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
  * 示例：
@@ -95,27 +97,5 @@ class SingleLinkedList19 {
             }
         }
         return nodes[0];
-    }
-
-    /***
-     * 单链表节点
-     */
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val) {
-            this.val = val;
-        }
-
-        public void printNode() {
-            ListNode printNode = this;
-            StringBuilder sb = new StringBuilder();
-            while (printNode != null) {
-                sb.append("-->").append(printNode.val);
-                printNode = printNode.next;
-            }
-            System.out.println(sb);
-        }
     }
 }
