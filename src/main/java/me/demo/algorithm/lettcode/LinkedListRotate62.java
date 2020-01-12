@@ -37,6 +37,16 @@ class LinkedListRotate62 {
         listNode.printNode();
     }
 
+    /***
+     * 旋转链表
+     * 1.求链表长度
+     * 2.计算实际需要移动的位置k
+     * 3.快慢指针法获取倒数第k个节点
+     * 4.链表旋转：k节点作为新的链表头，k-1节点作为链表尾，中间部分以循环链表方式连接
+     * @param head 链表头
+     * @param k 移动k个位置
+     * @return
+     */
     public static ListNode rotateRight(ListNode head, int k) {
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
