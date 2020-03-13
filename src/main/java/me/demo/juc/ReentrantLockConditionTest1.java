@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /***
  * Condition精确唤醒示例1
  */
-public class ReEntranLockConditionTest1 {
+public class ReentrantLockConditionTest1 {
     static class NumberWrapper {
         public int value = 1;
     }

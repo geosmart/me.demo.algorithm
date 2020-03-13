@@ -9,9 +9,16 @@ public class CommonTest {
 
     @Test
     public void test_bit_operator() {
-        System.out.println(10 >> 1);
-        System.out.println(10 << 1);
-        System.out.println(10 >>> 1);
+//        System.out.println(10 >> 1);
+//        System.out.println(10 << 1);
+//        System.out.println(10 >>> 1);
+        int[] a = new int[]{3, 7};
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(i + "-->" + a[i]);
+        }
+        for (int i = 0; i < a.length; ++i) {
+            System.out.println(i + "-->" + a[i]);
+        }
     }
 
     @Test

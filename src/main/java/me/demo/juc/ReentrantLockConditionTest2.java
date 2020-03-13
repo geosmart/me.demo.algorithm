@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /***
  * Condition精确唤醒示例2
  */
-public class ReEntranLockConditionTest2 {
+public class ReentrantLockConditionTest2 {
     public static void main(String[] args)  {
         final BoundedBuffer boundedBuffer = new BoundedBuffer();
 
