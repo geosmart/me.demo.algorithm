@@ -1,17 +1,29 @@
 package me.demo.algorithm.hash;
 
+import sun.misc.SharedSecrets;
+
 import java.io.IOException;
 import java.io.InvalidObjectException;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.*;
+import java.util.AbstractCollection;
+import java.util.AbstractSet;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.ConcurrentModificationException;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import java.util.Set;
+import java.util.Spliterator;
+import java.util.TreeMap;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
-
-import sun.misc.SharedSecrets;
 
 /**
  * Hash table based implementation of the <tt>Map</tt> interface.  This
@@ -603,6 +615,11 @@ public class HashMap<K, V> extends AbstractMap<K, V>
 
     /**
      * Implements Map.put and related methods.
+     * 步骤1：数组是否未初始化？若未初始化则进行resize初始化
+     * 步骤2：计算key对应的hash桶的下标,判断是否存在碰撞？若是没有碰撞直接放桶里
+     * 步骤3：若发生hash碰撞，若键已存在就返回该Node，并用属性e引用，若键不存在就创建一个新的Node，并直接插入到桶（链表/树）中
+     * 步骤4：该键已经存在,判断是否需要覆盖节点值
+     * 步骤5：检查键值对数量是否超过临界值，是则扩容
      *
      * @param hash         hash for key
      * @param key          the key
@@ -613,121 +630,187 @@ public class HashMap<K, V> extends AbstractMap<K, V>
      */
     final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
                    boolean evict) {
+        //tab：hash桶
         Node<K, V>[] tab;
+        //p：当前插入位置的节点数据
         Node<K, V> p;
+        //n：hash表数组长度
+        //i：当前插入值的数组下标
         int n, i;
-        if ((tab = table) == null || (n = tab.length) == 0)
+        //步骤1：数组是否未初始化？若未初始化则进行resize初始化
+        if ((tab = table) == null || (n = tab.length) == 0) {
             n = (tab = resize()).length;
-        if ((p = tab[i = (n - 1) & hash]) == null)
+        }
+        //步骤2：计算key在数组的下标:(n - 1) & hash，若是没有碰撞直接放桶里
+        if ((p = tab[i = (n - 1) & hash]) == null) {
             tab[i] = newNode(hash, key, value, null);
-        else {
+        } else {//步骤3：发生hash碰撞，若键已存在就返回该Node，并用属性e引用，若键不存在就创建一个新的Node，并直接插入到桶中
+            //当前实际插入node
             Node<K, V> e;
+            //当前插入key
             K k;
-            if (p.hash == hash &&
-                    ((k = p.key) == key || (key != null && key.equals(k))))
+            // 检查碰撞的节点是否是头节点
+            if (p.hash == hash && ((k = p.key) == key || (key != null && key.equals(k)))) {
+                //e为当前插入位置的节点数据
                 e = p;
-            else if (p instanceof TreeNode)
+            } else if (p instanceof TreeNode) {//若该桶的内部结构是树
+                //将插入的元素新增为树节点,e为插入树节点数据
                 e = ((TreeNode<K, V>) p).putTreeVal(this, tab, hash, key, value);
-            else {
+            } else {//若该桶的内部结构是链表
+                //遍历链表：1-直到链表尾部时break，2-链表中存在key与插入key一致时break
+                //处理完成后，e为插入节点数据（链表尾部节点）
                 for (int binCount = 0; ; ++binCount) {
+                    //e是p的下一个节点
                     if ((e = p.next) == null) {
+                        //尾插法：新节点插入链表的尾部
                         p.next = newNode(hash, key, value, null);
-                        if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st
+                        //链表长度>=8时，链表升级为树结构
+                        if (binCount >= TREEIFY_THRESHOLD - 1) { // -1 for 1st
                             treeifyBin(tab, hash);
+                        }
                         break;
                     }
-                    if (e.hash == hash &&
-                            ((k = e.key) == key || (key != null && key.equals(k))))
+                    // key已经存在直接覆盖value：node的hash一致，key一致或key的内存地址一致
+                    if (e.hash == hash && ((k = e.key) == key || (key != null && key.equals(k)))) {
                         break;
+                    }
+                    //链表遍历指针移动到下一个节点
                     p = e;
                 }
             }
+            //步骤4：该键已经存在
             if (e != null) { // existing mapping for key
+                //当前值
                 V oldValue = e.value;
-                if (!onlyIfAbsent || oldValue == null)
+                //onlyIfAbsent表示不存在才插入，反之为存在才插入
+                if (!onlyIfAbsent || oldValue == null) {
                     e.value = value;
+                }
                 afterNodeAccess(e);
+                //返回已有值，或覆盖后的值
                 return oldValue;
             }
         }
         ++modCount;
-        if (++size > threshold)
+        //骤5：检查键值对数量是否超过临界值，是则扩容
+        if (++size > threshold) {
             resize();
+        }
         afterNodeInsertion(evict);
         return null;
     }
 
     /**
+     * 如果 table 数组为 null，则根据字段 threshold 中保持的初始容量进行分配。
+     * 否则扩容，因为我们使用的是 2 的幂，所以每个桶中的元素必须保持相同的索引，或者在新 table 中以 2 的幂偏移。
+     * 步骤1：根据 oldCap 判断是扩容还是初始化数组
+     * 步骤2；若已执行过初始化.在已有基础上扩容
+     * 步骤3：若未执行过初始化，使用默认容量初始化
+     * 步骤4：根据loadFactor计算扩容后的桶阈值
+     * 步骤5：实例化新的table数组
+     * 步骤6：遍历原桶的节点，将原桶的节点都移到新桶中
      * Initializes or doubles table size.  If null, allocates in
      * accord with initial capacity target held in field threshold.
-     * Otherwise, because we are using power-of-two expansion, the
-     * elements from each bin must either stay at same index, or move
-     * with a power of two offset in the new table.
+     * Otherwise, because we are using power-of-two expansion,
+     * the elements from each bin must either stay at same index,
+     * or move with a power of two offset in the new table.
      *
-     * @return the table
+     * @return the table 扩容后的hash桶
      */
     final Node<K, V>[] resize() {
         Node<K, V>[] oldTab = table;
+        //当前hash桶大小
         int oldCap = (oldTab == null) ? 0 : oldTab.length;
+        //当前扩容阈值
         int oldThr = threshold;
+        //扩容后hash桶大小，新的扩容阈值
         int newCap, newThr = 0;
+        //步骤1：根据 oldCap 判断是扩容还是初始化数组，若是扩容..
         if (oldCap > 0) {
+            //超过最大容量就不再扩容，任其发生碰撞
             if (oldCap >= MAXIMUM_CAPACITY) {
                 threshold = Integer.MAX_VALUE;
                 return oldTab;
-            } else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
-                    oldCap >= DEFAULT_INITIAL_CAPACITY)
+            }
+            //没超过最大值，就扩容为原来的2倍
+            else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
+                    oldCap >= DEFAULT_INITIAL_CAPACITY) {
                 newThr = oldThr << 1; // double threshold
-        } else if (oldThr > 0) // initial capacity was placed in threshold
+            }
+        }
+        //步骤2；若已执行过初始化
+        else if (oldThr > 0) { // initial capacity was placed in threshold
             newCap = oldThr;
-        else {               // zero initial threshold signifies using defaults
+        } else { // zero initial threshold signifies using defaults
+            //步骤3：若未执行过初始化，使用默认容量初始化
             newCap = DEFAULT_INITIAL_CAPACITY;
             newThr = (int) (DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
         }
         if (newThr == 0) {
+            //步骤4：根据loadFactor计算扩容阈值
             float ft = (float) newCap * loadFactor;
             newThr = (newCap < MAXIMUM_CAPACITY && ft < (float) MAXIMUM_CAPACITY ?
                     (int) ft : Integer.MAX_VALUE);
         }
+        //设置扩容阈值
         threshold = newThr;
+        //步骤5：实例化新的 table 数组
         @SuppressWarnings({"rawtypes", "unchecked"})
         Node<K, V>[] newTab = (Node<K, V>[]) new Node[newCap];
         table = newTab;
         if (oldTab != null) {
+            //步骤6：遍历原桶的节点，将原桶的节点都移到新桶中
             for (int j = 0; j < oldCap; ++j) {
                 Node<K, V> e;
                 if ((e = oldTab[j]) != null) {
+                    //节点不为空时，去掉旧数组对该桶的引用
                     oldTab[j] = null;
-                    if (e.next == null)
+                    //若桶内无哈希碰撞，重新计算桶下标
+                    if (e.next == null) {
                         newTab[e.hash & (newCap - 1)] = e;
-                    else if (e instanceof TreeNode)
+                    }
+                    //若桶内部结构为树
+                    else if (e instanceof TreeNode) {
                         ((TreeNode<K, V>) e).split(this, newTab, j, oldCap);
-                    else { // preserve order
+                    } else { // preserve order
+                        //若是该桶内部结构为链表，则碰撞的节点要么在原桶，要么在新桶，根据e.hash & oldCap随机打散链表
+                        //原桶的头尾节点引用
                         Node<K, V> loHead = null, loTail = null;
+                        //新桶的头尾节点引用
                         Node<K, V> hiHead = null, hiTail = null;
+                        //链表遍历指针
                         Node<K, V> next;
+                        //遍历桶内碰撞节点
                         do {
                             next = e.next;
+                            // 新增位是 0 放原桶
                             if ((e.hash & oldCap) == 0) {
-                                if (loTail == null)
+                                if (loTail == null) {//第一次遍历,记录头指针
                                     loHead = e;
-                                else
+                                } else {//后续根据尾指针遍历
                                     loTail.next = e;
+                                }
                                 loTail = e;
-                            } else {
-                                if (hiTail == null)
+                            }
+                            // 新增位是 1 放新桶
+                            else {
+                                if (hiTail == null) {
                                     hiHead = e;
-                                else
+                                } else {
                                     hiTail.next = e;
+                                }
                                 hiTail = e;
                             }
                         } while ((e = next) != null);
+                        // 原桶中放原链表
                         if (loTail != null) {
                             loTail.next = null;
                             newTab[j] = loHead;
                         }
+                        // 新桶中放新链表
                         if (hiTail != null) {
                             hiTail.next = null;
+                            //偏移大小=当前桶大小（2的指数）
                             newTab[j + oldCap] = hiHead;
                         }
                     }
