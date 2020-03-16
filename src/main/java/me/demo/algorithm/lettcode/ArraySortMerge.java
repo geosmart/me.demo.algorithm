@@ -25,7 +25,7 @@ class ArraySortMerge {
     public static void main(String[] args) {
         int[] A = new int[]{1, 2, 3, 0, 0, 0};
         int[] B = new int[]{2, 5, 6};
-        merge_v1(A, 3, B, 3);
+        merge_v2(A, 3, B, 3);
 
 
 //        int[] A = new int[]{2, 0};
@@ -33,6 +33,14 @@ class ArraySortMerge {
 //        merge_v2(A, 1, B, 1);
 
         System.out.println(Arrays.toString(A));
+    }
+
+    /**
+     * JDK 快排实现
+     */
+    public static void merge_v0(int[] A, int m, int[] B, int n) {
+        System.arraycopy(B, 0, A, m, n);
+        Arrays.sort(A);
     }
 
     /***
@@ -56,6 +64,8 @@ class ArraySortMerge {
                 //剩余的元素逐个反向插入
                 A[i] = B[pb];
                 pb--;
+                //System.arraycopy(B, 0, A, 0, pb + 1);
+                //break;
             } else if (pb == -1) {
                 A[i] = A[pa];
                 pa--;

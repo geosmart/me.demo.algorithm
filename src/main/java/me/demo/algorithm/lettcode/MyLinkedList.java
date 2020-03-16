@@ -1,5 +1,8 @@
 package me.demo.algorithm.lettcode;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 import me.demo.algorithm.lettcode.linkedlist.ListNode;
 import me.demo.algorithm.lettcode.linkedlist.SingleLinkkedList;
 
@@ -19,6 +22,8 @@ class MyLinkedList {
         sList.addNode(new ListNode(9));
         sList.removeNode(new ListNode(9));
         sList.getHead().printNode();
+
+        Deque<Integer> queue = new LinkedList<>();
     }
 
 }

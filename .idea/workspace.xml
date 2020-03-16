@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/hash/ConcurrentHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/hash/ThreadLocalRandom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/ArrayPivotIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/ArraySortMerge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/ArrayBinarySearch704.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListAddTwoNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/String383.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/TrieTree208.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/hash/HashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/hash/HashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/ArraySortMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/ArraySortMerge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,9 +85,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ArraySortMerge">
-    <configuration name="ArrayPivotIndex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.ArrayPivotIndex" />
+  <component name="RunManager" selected="Application.TrieTree208">
+    <configuration name="ArrayBinarySearch704" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.ArrayBinarySearch704" />
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
@@ -111,8 +112,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BTreeLevelOrder102" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.BTreeLevelOrder102" />
+    <configuration name="LinkedListAddTwoNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.LinkedListAddTwoNumber" />
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +125,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BTreeZigzagLevelOrder103" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.BTreeZigzagLevelOrder103" />
+    <configuration name="String383" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.String383" />
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
@@ -137,36 +138,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommonTest.test_bit_operator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrieTree208" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.TrieTree208" />
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.algorithm.algorithm.test.*" />
+          <option name="PATTERN" value="me.demo.algorithm.lettcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="me.demo.algorithm.algorithm.test" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.algorithm.test.CommonTest" />
-      <option name="METHOD_NAME" value="test_bit_operator" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BTreeLevelOrder102" />
-      <item itemvalue="JUnit.CommonTest.test_bit_operator" />
-      <item itemvalue="Application.BTreeZigzagLevelOrder103" />
-      <item itemvalue="Application.ArrayPivotIndex" />
       <item itemvalue="Application.ArraySortMerge" />
+      <item itemvalue="Application.ArrayBinarySearch704" />
+      <item itemvalue="Application.LinkedListAddTwoNumber" />
+      <item itemvalue="Application.String383" />
+      <item itemvalue="Application.TrieTree208" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TrieTree208" />
+        <item itemvalue="Application.String383" />
+        <item itemvalue="Application.LinkedListAddTwoNumber" />
+        <item itemvalue="Application.ArrayBinarySearch704" />
         <item itemvalue="Application.ArraySortMerge" />
-        <item itemvalue="Application.ArrayPivotIndex" />
-        <item itemvalue="Application.BTreeZigzagLevelOrder103" />
-        <item itemvalue="JUnit.CommonTest.test_bit_operator" />
-        <item itemvalue="Application.BTreeLevelOrder102" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +228,9 @@
       <workItem from="1583365577996" duration="7924000" />
       <workItem from="1583544674221" duration="14919000" />
       <workItem from="1583677518245" duration="287000" />
-      <workItem from="1584017592606" duration="50750000" />
+      <workItem from="1584017592606" duration="51887000" />
+      <workItem from="1584234169173" duration="19268000" />
+      <workItem from="1584323970058" duration="16236000" />
     </task>
     <task id="LOCAL-00001" summary="update-PriorityQueue source code comment">
       <created>1566651439817</created>
@@ -337,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584110271792</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update-merge sort">
+      <created>1584196600594</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1584196600594</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -357,7 +364,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -375,7 +384,8 @@
     <MESSAGE value="update-linkedList rotate" />
     <MESSAGE value="update-juc lock demo" />
     <MESSAGE value="update-bfs" />
-    <option name="LAST_COMMIT_MESSAGE" value="update-bfs" />
+    <MESSAGE value="update-merge sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="update-merge sort" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
