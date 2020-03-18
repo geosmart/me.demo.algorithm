@@ -1,6 +1,6 @@
 package me.demo.algorithm.algorithm.test;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by Think on 2016/8/16.

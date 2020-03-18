@@ -3,7 +3,7 @@ package me.demo.algorithm.algorithm.test;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 public class MapTest {

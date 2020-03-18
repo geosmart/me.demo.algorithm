@@ -2,7 +2,7 @@ package me.demo.algorithm.algorithm.test;
 
 import com.alibaba.fastjson.JSON;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;

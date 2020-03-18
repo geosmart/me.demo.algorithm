@@ -2,13 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/ArrayBinarySearch704.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/LinkedListAddTwoNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/String383.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/TrieTree208.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/design/MinuteHourCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/design/question.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/juc/ReentrantLockConditionTest3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/stream/StreamForLoopTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/stream/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/GiveMeK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/me.demo.algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/me.demo.algorithm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/ArraySortMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/ArraySortMerge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/lettcode/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/stream/StreamAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/stream/StreamAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/ArrayCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/ArrayCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/CommonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/CommonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/HeapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/MapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/MapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/PriorityBlockingQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/PriorityBlockingQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/PriorityQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/PriorityQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/RecursionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/RecursionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/SortingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/SortingTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +64,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
@@ -52,7 +80,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../code/biss/aicloud-biss" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -60,14 +88,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="me.demo.stream" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="me.demo.juc" />
+      <recent name="me.demo.algorithm.algorithm.test" />
+      <recent name="me.demo.stream" />
       <recent name="me.demo.algorithm.lettcode" />
       <recent name="me.demo.algorithm.hash" />
-      <recent name="me.demo.juc.src" />
-      <recent name="me.demo.juc" />
-      <recent name="me.demo.algorithm.LinkedList" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\design" />
       <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\juc\src" />
       <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\rpc" />
       <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\juc" />
@@ -85,13 +117,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TrieTree208">
-    <configuration name="ArrayBinarySearch704" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.ArrayBinarySearch704" />
+  <component name="RunManager" selected="JUnit.ReentrantLockConditionTest3.main">
+    <configuration name="GiveMeK" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.algorithm.test.GiveMeK" />
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.algorithm.lettcode.*" />
+          <option name="PATTERN" value="me.demo.algorithm.algorithm.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +131,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArraySortMerge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.ArraySortMerge" />
+    <configuration name="ReentrantLockConditionTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.juc.ReentrantLockConditionTest3" />
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.algorithm.lettcode.*" />
+          <option name="PATTERN" value="me.demo.juc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,59 +144,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListAddTwoNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.LinkedListAddTwoNumber" />
+    <configuration name="ReentrantLockConditionTest3.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.algorithm.lettcode.*" />
+          <option name="PATTERN" value="me.demo.juc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="me.demo.juc" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.juc.ReentrantLockConditionTest3" />
+      <option name="METHOD_NAME" value="main" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="String383" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.String383" />
+    <configuration name="StreamAPITest.test_swap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.algorithm.lettcode.*" />
+          <option name="PATTERN" value="me.demo.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="me.demo.stream" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.stream.StreamAPITest" />
+      <option name="METHOD_NAME" value="test_swap" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrieTree208" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.lettcode.TrieTree208" />
+    <configuration name="StreamForLoopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.algorithm.lettcode.*" />
+          <option name="PATTERN" value="me.demo.stream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="me.demo.stream" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.stream.StreamForLoopTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ArraySortMerge" />
-      <item itemvalue="Application.ArrayBinarySearch704" />
-      <item itemvalue="Application.LinkedListAddTwoNumber" />
-      <item itemvalue="Application.String383" />
-      <item itemvalue="Application.TrieTree208" />
+      <item itemvalue="Application.GiveMeK" />
+      <item itemvalue="JUnit.StreamForLoopTest" />
+      <item itemvalue="JUnit.StreamAPITest.test_swap" />
+      <item itemvalue="Application.ReentrantLockConditionTest3" />
+      <item itemvalue="JUnit.ReentrantLockConditionTest3.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TrieTree208" />
-        <item itemvalue="Application.String383" />
-        <item itemvalue="Application.LinkedListAddTwoNumber" />
-        <item itemvalue="Application.ArrayBinarySearch704" />
-        <item itemvalue="Application.ArraySortMerge" />
+        <item itemvalue="JUnit.ReentrantLockConditionTest3.main" />
+        <item itemvalue="Application.ReentrantLockConditionTest3" />
+        <item itemvalue="JUnit.StreamAPITest.test_swap" />
+        <item itemvalue="Application.GiveMeK" />
+        <item itemvalue="JUnit.StreamForLoopTest" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +270,10 @@
       <workItem from="1583677518245" duration="287000" />
       <workItem from="1584017592606" duration="51887000" />
       <workItem from="1584234169173" duration="19268000" />
-      <workItem from="1584323970058" duration="16236000" />
+      <workItem from="1584323970058" duration="20742000" />
+      <workItem from="1584366146630" duration="1381000" />
+      <workItem from="1584410342056" duration="5527000" />
+      <workItem from="1584490717736" duration="5875000" />
     </task>
     <task id="LOCAL-00001" summary="update-PriorityQueue source code comment">
       <created>1566651439817</created>
@@ -344,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584196600594</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="update-trie tree">
+      <created>1584361654229</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1584361654229</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -385,7 +435,8 @@
     <MESSAGE value="update-juc lock demo" />
     <MESSAGE value="update-bfs" />
     <MESSAGE value="update-merge sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="update-merge sort" />
+    <MESSAGE value="update-trie tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="update-trie tree" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -395,6 +446,9 @@
         <watch expression="queue[right]" language="JAVA" />
         <watch expression="size" language="JAVA" />
         <watch expression="key" language="JAVA" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="heap.peek()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

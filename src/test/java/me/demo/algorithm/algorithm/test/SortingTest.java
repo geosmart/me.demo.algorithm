@@ -1,6 +1,6 @@
 package me.demo.algorithm.algorithm.test;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import me.demo.algorithm.sorting.BucketSort;
 import me.demo.algorithm.sorting.CountingSort;
