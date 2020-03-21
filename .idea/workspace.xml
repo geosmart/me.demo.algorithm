@@ -2,34 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/design/MinuteHourCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/design/question.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/juc/ReentrantLockConditionTest3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/stream/StreamForLoopTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/stream/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/GiveMeK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/me.demo.algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/me.demo.algorithm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/Buffer.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/Channel.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestBlcokingNIO1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestBlcokingNIO2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestBuffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestChannel1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestChannel2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestNonBlcokingNIO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestNonBlcokingNIO2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestPipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/string/StringTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/stream/StreamAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/stream/StreamAPITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/ArrayCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/ArrayCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/CommonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/CommonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/HeapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/MapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/MapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/PriorityBlockingQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/PriorityBlockingQueueTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/PriorityQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/PriorityQueueTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/RecursionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/RecursionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/SortingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/demo/algorithm/algorithm/test/SortingTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,25 +64,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../code/biss/aicloud-biss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/me/demo/nio" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Diagrams" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="me.demo.stream" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="me.demo.nio" />
+      <recent name="me.demo.string" />
       <recent name="me.demo.juc" />
       <recent name="me.demo.algorithm.algorithm.test" />
       <recent name="me.demo.stream" />
-      <recent name="me.demo.algorithm.lettcode" />
-      <recent name="me.demo.algorithm.hash" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\nio" />
       <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\design" />
       <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\juc\src" />
       <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\rpc" />
@@ -117,94 +102,101 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReentrantLockConditionTest3.main">
-    <configuration name="GiveMeK" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.algorithm.test.GiveMeK" />
+  <component name="RunManager" selected="JUnit.TestPipe.test_pipe">
+    <configuration name="TestNonBlcokingNIO2.recieve" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.algorithm.algorithm.test.*" />
+          <option name="PATTERN" value="me.demo.nio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReentrantLockConditionTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.demo.juc.ReentrantLockConditionTest3" />
-      <module name="me.demo.algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.demo.juc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReentrantLockConditionTest3.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="me.demo.algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.demo.juc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="me.demo.juc" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.juc.ReentrantLockConditionTest3" />
-      <option name="METHOD_NAME" value="main" />
+      <option name="PACKAGE_NAME" value="me.demo.nio" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestNonBlcokingNIO2" />
+      <option name="METHOD_NAME" value="recieve" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamAPITest.test_swap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNonBlcokingNIO2.send" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.stream.*" />
+          <option name="PATTERN" value="me.demo.nio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="me.demo.stream" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.stream.StreamAPITest" />
-      <option name="METHOD_NAME" value="test_swap" />
+      <option name="PACKAGE_NAME" value="me.demo.nio" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestNonBlcokingNIO2" />
+      <option name="METHOD_NAME" value="send" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamForLoopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNonBlcokingNIO.client" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.stream.*" />
+          <option name="PATTERN" value="me.demo.nio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="me.demo.stream" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.stream.StreamForLoopTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="me.demo.nio" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestNonBlcokingNIO" />
+      <option name="METHOD_NAME" value="client" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestNonBlcokingNIO.server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="me.demo.algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.demo.nio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.demo.nio" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestNonBlcokingNIO" />
+      <option name="METHOD_NAME" value="server" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPipe.test_pipe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="me.demo.algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.demo.nio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.demo.nio" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestPipe" />
+      <option name="METHOD_NAME" value="test_pipe" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GiveMeK" />
-      <item itemvalue="JUnit.StreamForLoopTest" />
-      <item itemvalue="JUnit.StreamAPITest.test_swap" />
-      <item itemvalue="Application.ReentrantLockConditionTest3" />
-      <item itemvalue="JUnit.ReentrantLockConditionTest3.main" />
+      <item itemvalue="JUnit.TestNonBlcokingNIO.server" />
+      <item itemvalue="JUnit.TestNonBlcokingNIO.client" />
+      <item itemvalue="JUnit.TestNonBlcokingNIO2.recieve" />
+      <item itemvalue="JUnit.TestNonBlcokingNIO2.send" />
+      <item itemvalue="JUnit.TestPipe.test_pipe" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReentrantLockConditionTest3.main" />
-        <item itemvalue="Application.ReentrantLockConditionTest3" />
-        <item itemvalue="JUnit.StreamAPITest.test_swap" />
-        <item itemvalue="Application.GiveMeK" />
-        <item itemvalue="JUnit.StreamForLoopTest" />
+        <item itemvalue="JUnit.TestPipe.test_pipe" />
+        <item itemvalue="JUnit.TestNonBlcokingNIO2.send" />
+        <item itemvalue="JUnit.TestNonBlcokingNIO2.recieve" />
+        <item itemvalue="JUnit.TestNonBlcokingNIO.client" />
+        <item itemvalue="JUnit.TestNonBlcokingNIO.server" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +265,9 @@
       <workItem from="1584323970058" duration="20742000" />
       <workItem from="1584366146630" duration="1381000" />
       <workItem from="1584410342056" duration="5527000" />
-      <workItem from="1584490717736" duration="5875000" />
+      <workItem from="1584490717736" duration="7390000" />
+      <workItem from="1584694452608" duration="29304000" />
+      <workItem from="1584803608502" duration="1653000" />
     </task>
     <task id="LOCAL-00001" summary="update-PriorityQueue source code comment">
       <created>1566651439817</created>
@@ -394,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584361654229</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update-reentranlock condition testcase">
+      <created>1584519630341</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1584519630341</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -436,7 +437,8 @@
     <MESSAGE value="update-bfs" />
     <MESSAGE value="update-merge sort" />
     <MESSAGE value="update-trie tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="update-trie tree" />
+    <MESSAGE value="update-reentranlock condition testcase" />
+    <option name="LAST_COMMIT_MESSAGE" value="update-reentranlock condition testcase" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -455,6 +457,11 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/me_demo_algorithm$TestBlcokingNIO_client.ic" NAME="TestBlcokingNIO.client Coverage Results" MODIFIED="1584798416955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>me.demo.nio.*</FILTER>
+    </SUITE>
   </component>
   <component name="masterDetails">
     <states>
