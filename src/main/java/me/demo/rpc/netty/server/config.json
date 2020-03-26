@@ -1,0 +1,8 @@
+{
+  "idle": 60,
+  "expire_time": 120,
+  "bind_port": "6878,6879",
+  "bind_addr": "0.0.0.0",
+  "service_home": "/work/git/zqzn/aicloud/aicloud-parent/target",
+  "lib_home": "/work/git/zqzn/aicloud/aicloud-parent/target/lib"
+}

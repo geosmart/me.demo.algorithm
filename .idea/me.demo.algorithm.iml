@@ -20,6 +20,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.6.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.platform:junit-platform-engine:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.59" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty:3.10.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.48.Final" level="project" />
   </component>
 </module>

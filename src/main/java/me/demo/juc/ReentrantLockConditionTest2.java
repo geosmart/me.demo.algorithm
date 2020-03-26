@@ -41,7 +41,6 @@ public class ReentrantLockConditionTest2 {
     /**
      * BoundedBuffer 是一个定长100的集合，当集合中没有元素时，take方法需要等待，直到有元素时才返回元素
      * 当其中的元素数达到最大值时，要等待直到元素被take之后才执行put的操作
-     * @author yukaizhao
      *
      */
     static class BoundedBuffer {

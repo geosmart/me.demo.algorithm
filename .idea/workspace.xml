@@ -1,19 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/Buffer.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/Channel.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestBlcokingNIO1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestBlcokingNIO2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestChannel1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestChannel2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestNonBlcokingNIO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestNonBlcokingNIO2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/nio/TestPipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/string/StringTest.java" afterDir="false" />
+    <list default="true" id="7648eb1a-3546-4791-a87d-d56a0c880a64" name="Default Changelist" comment="update-netty rpc">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_48_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/algorithm/str/strStr26.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/ConnectException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/CoreException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/ErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/FatalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/IncorrectConfigurationError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/RPCException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/ServiceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/TimeoutException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/UnexpectedRPCException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/exceptions/WarnException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/helper/BytesHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/helper/StringHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/helper/SystemHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/common/util/DateTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/juc/ArrayListLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/netty/ChannelPipeline.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/netty/EventLoop.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/netty/channel.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/netty/echo/EchoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/netty/echo/EchoClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/netty/echo/EchoServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/netty/echo/EchoServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/netty/netty.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/client/LocalServiceStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/client/RPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/client/RPCCommandRemote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/client/RPCTcpConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/client/RPCTcpConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/client/demo/TestBeanRemote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/client/demo/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/AbstractDataRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/AbstractDataWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/DataRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/DataReadStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/DataReadWriteConsts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/DataWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/DataWriteStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/ObjectReadWritable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/ReadWritable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/Readable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/io/Writable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/AbstractAsyncConnectionPack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/AsyncConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/AsyncConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/AsyncConnectionSendErrorPack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/AsyncNotifyListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/IAsyncConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/IAsyncConnectionPack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/IAsyncConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/IConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/IConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/tcp/AsyncTcpConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/pools/tcp/AsyncTcpConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/protocol/RPCBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/protocol/RPCRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/protocol/RPCResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/protocol/RequestDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/protocol/ResponseEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/protocol/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/protocol/rpc.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/sdc/SDCHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/sdc/SDCResourceChangeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/IRPCService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/RPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/RPCService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/ServiceInstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/ServiceInstancePool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/ServiceJarLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/ServicePool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/SessionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/server/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/watch/WatchFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/watch/WatchTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/watch/Watcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_10_6_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/me.demo.algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/me.demo.algorithm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/design/MinuteHourCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/design/MinuteHourCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/demo/juc/ReentrantLockConditionTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/demo/juc/ReentrantLockConditionTest2.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,12 +129,16 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1Z1rlJc3OglPvS0R7kVzRabgLLy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/me/demo/nio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/me/demo/rpc/netty/client" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -73,21 +147,27 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="me.demo.netty.rpc.server" />
       <recent name="me.demo.stream" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="me.demo.common" />
+      <recent name="me.demo.rpc.netty" />
+      <recent name="me.demo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="me.demo.nio" />
-      <recent name="me.demo.string" />
-      <recent name="me.demo.juc" />
-      <recent name="me.demo.algorithm.algorithm.test" />
-      <recent name="me.demo.stream" />
+      <recent name="me.demo.algorithm.str" />
+      <recent name="me.demo.helper" />
+      <recent name="me.demo.netty.rpc.exceptions" />
+      <recent name="me.demo.netty.rpc.sdc" />
+      <recent name="me.demo.netty.rpc.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\nio" />
-      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\design" />
-      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\juc\src" />
-      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\rpc" />
-      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\juc" />
+      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\rpc\netty\client" />
+      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo" />
+      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\netty\rpc\exceptions" />
+      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\netty\rpc" />
+      <recent name="D:\WorkSpace\tutorial\me.demo.algorithm\src\main\java\me\demo\netty\rpc\rpc\log" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -102,101 +182,92 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestPipe.test_pipe">
-    <configuration name="TestNonBlcokingNIO2.recieve" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.strStr26.test_ste">
+    <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.netty.echo.EchoClient" />
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.nio.*" />
+          <option name="PATTERN" value="me.demo.netty.echo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="me.demo.nio" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestNonBlcokingNIO2" />
-      <option name="METHOD_NAME" value="recieve" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EchoServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.netty.echo.EchoServer" />
+      <module name="me.demo.algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.demo.netty.echo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MinuteHourCounterImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.demo.design.MinuteHourCounterImpl" />
+      <module name="me.demo.algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.demo.design.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListLock.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="me.demo.algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.demo.juc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.demo.juc" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.juc.ArrayListLock" />
+      <option name="METHOD_NAME" value="main" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestNonBlcokingNIO2.send" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="strStr26.test_ste" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="me.demo.algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="me.demo.nio.*" />
+          <option name="PATTERN" value="me.demo.algorithm.str.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="me.demo.nio" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestNonBlcokingNIO2" />
-      <option name="METHOD_NAME" value="send" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestNonBlcokingNIO.client" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="me.demo.algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.demo.nio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="me.demo.nio" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestNonBlcokingNIO" />
-      <option name="METHOD_NAME" value="client" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestNonBlcokingNIO.server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="me.demo.algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.demo.nio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="me.demo.nio" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestNonBlcokingNIO" />
-      <option name="METHOD_NAME" value="server" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPipe.test_pipe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="me.demo.algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.demo.nio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="me.demo.nio" />
-      <option name="MAIN_CLASS_NAME" value="me.demo.nio.TestPipe" />
-      <option name="METHOD_NAME" value="test_pipe" />
+      <option name="PACKAGE_NAME" value="me.demo.algorithm.str" />
+      <option name="MAIN_CLASS_NAME" value="me.demo.algorithm.str.strStr26" />
+      <option name="METHOD_NAME" value="test_ste" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestNonBlcokingNIO.server" />
-      <item itemvalue="JUnit.TestNonBlcokingNIO.client" />
-      <item itemvalue="JUnit.TestNonBlcokingNIO2.recieve" />
-      <item itemvalue="JUnit.TestNonBlcokingNIO2.send" />
-      <item itemvalue="JUnit.TestPipe.test_pipe" />
+      <item itemvalue="Application.EchoServer" />
+      <item itemvalue="Application.EchoClient" />
+      <item itemvalue="Application.MinuteHourCounterImpl" />
+      <item itemvalue="JUnit.ArrayListLock.main" />
+      <item itemvalue="JUnit.strStr26.test_ste" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPipe.test_pipe" />
-        <item itemvalue="JUnit.TestNonBlcokingNIO2.send" />
-        <item itemvalue="JUnit.TestNonBlcokingNIO2.recieve" />
-        <item itemvalue="JUnit.TestNonBlcokingNIO.client" />
-        <item itemvalue="JUnit.TestNonBlcokingNIO.server" />
+        <item itemvalue="JUnit.strStr26.test_ste" />
+        <item itemvalue="Application.MinuteHourCounterImpl" />
+        <item itemvalue="JUnit.ArrayListLock.main" />
+        <item itemvalue="Application.EchoClient" />
+        <item itemvalue="Application.EchoServer" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +338,11 @@
       <workItem from="1584410342056" duration="5527000" />
       <workItem from="1584490717736" duration="7390000" />
       <workItem from="1584694452608" duration="29304000" />
-      <workItem from="1584803608502" duration="1653000" />
+      <workItem from="1584803608502" duration="9000000" />
+      <workItem from="1584958415600" duration="2152000" />
+      <workItem from="1585015530473" duration="18188000" />
+      <workItem from="1585227075635" duration="1025000" />
+      <workItem from="1585228123010" duration="2814000" />
     </task>
     <task id="LOCAL-00001" summary="update-PriorityQueue source code comment">
       <created>1566651439817</created>
@@ -395,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584519630341</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update-nio">
+      <created>1584805490436</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1584805490436</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -424,6 +506,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update-PriorityQueue source code comment" />
     <MESSAGE value="update-PriorityQueue solve topK" />
     <MESSAGE value="update-btree tranversal in order bt stack" />
@@ -438,7 +521,8 @@
     <MESSAGE value="update-merge sort" />
     <MESSAGE value="update-trie tree" />
     <MESSAGE value="update-reentranlock condition testcase" />
-    <option name="LAST_COMMIT_MESSAGE" value="update-reentranlock condition testcase" />
+    <MESSAGE value="update-nio" />
+    <option name="LAST_COMMIT_MESSAGE" value="update-nio" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -448,6 +532,9 @@
         <watch expression="queue[right]" language="JAVA" />
         <watch expression="size" language="JAVA" />
         <watch expression="key" language="JAVA" />
+        <watch expression="k - b.length" language="JAVA" />
+        <watch expression="i" language="JAVA" />
+        <watch expression="k - b.length==i" language="JAVA" />
       </configuration>
       <configuration name="Application">
         <watch expression="heap.peek()" language="JAVA" />

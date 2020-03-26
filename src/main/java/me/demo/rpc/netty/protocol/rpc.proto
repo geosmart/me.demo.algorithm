@@ -1,0 +1,20 @@
+package rpc; 
+
+option java_package = "zqzn.aicloud.biss.rpc.protocol";
+option java_outer_classname = "RPCProtoBuf";
+
+message RPCRequest{
+    required int32 packId=1;
+ 
+    optional string serviceName=2;
+   
+    optional string methodName=3;
+    
+    optional bytes params = 4;
+} 
+
+message RPCResponse{
+     required int32 packId=1;
+     optional bytes result=2;
+     optional bytes exception=3;
+}
