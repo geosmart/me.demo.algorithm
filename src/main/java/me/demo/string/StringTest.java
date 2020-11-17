@@ -70,6 +70,12 @@ public class StringTest {
     }
 
     @Test
+    public void test_substr() {
+        String s1 = "Hello World";
+        System.out.println(s1.substring(0, 1));
+    }
+
+    @Test
     public void test_operation() {
         String s1 = "Hello World";
         // 1. concatenate
