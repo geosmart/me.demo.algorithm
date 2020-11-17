@@ -1,7 +1,8 @@
 package me.demo.algorithm.sorting;
 
+import static me.demo.algorithm.util.SortingUtil.swap;
+
 import me.demo.algorithm.util.PrintUtil;
-import me.demo.algorithm.util.SortingUtil;
 
 /**
  * 快速排序（Quicksort）又称划分交换排序（partition-exchange sort）
@@ -16,6 +17,11 @@ import me.demo.algorithm.util.SortingUtil;
  * @see [http://visualgo.net/sorting],[http://developer.51cto.com/art/201403/430986.htm]
  */
 public class QuikSort {
+    public static void main(String[] args) {
+        int[] a = new int[]{8, 1, 3, 2, 7, 6, 4};
+        quicksort(a, 0, a.length - 1);
+        System.out.println(a);
+    }
 
     /**
      * 快速排序-asc
@@ -51,7 +57,7 @@ public class QuikSort {
             //交换两个数在数组中的位置：哨兵i与哨兵j尚未碰面
             if (i < j) {
                 PrintUtil.print("swap i(" + i + ":" + a[i] + ")<-> j(" + j + ":" + a[j] + ")");
-                SortingUtil.swap(a, i, j);
+                swap(a, i, j);
                 PrintUtil.print(a);
             }
         }
@@ -64,6 +70,31 @@ public class QuikSort {
         quicksort(a, left, i - 1);
         //递归处理右边的
         quicksort(a, i + 1, right);
+    }
+
+    /**
+     * 快速排序-asc
+     */
+    public static void quicksort_meet(int[] a, int left, int right) {
+        if (left >= right) {
+            return;
+        }
+        int i = left, j = right, pivot = a[left];
+        while (i != j) {
+            while (a[j] >= pivot && i < j) {
+                j--;
+            }
+            while (a[i] <= pivot && i < j) {
+                i++;
+            }
+            if (i < j) {
+                swap(a, i, j);
+            }
+        }
+        a[left] = a[i];
+        a[i] = pivot;
+        quicksort_meet(a, left, i - 1);
+        quicksort_meet(a, i + 1, right);
     }
 
     /**
@@ -100,7 +131,7 @@ public class QuikSort {
             //交换两个数在数组中的位置：哨兵i与哨兵j尚未碰面
             if (i < j) {
                 PrintUtil.print("swap i(" + i + ":" + a[i] + ")<-> j(" + j + ":" + a[j] + ")");
-                SortingUtil.swap(a, i, j);
+                swap(a, i, j);
                 PrintUtil.print(a);
             }
         }
@@ -148,7 +179,7 @@ public class QuikSort {
             if (i <= j) {
                 if (i < j) {
                     PrintUtil.print("swap i(" + i + ":" + a[i] + ")<-> j(" + j + ":" + a[j] + ")");
-                    SortingUtil.swap(a, i, j);
+                    swap(a, i, j);
                     PrintUtil.print(a);
                 }
                 i++;

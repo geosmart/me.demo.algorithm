@@ -30,7 +30,7 @@
         <commons-io.version>2.4</commons-io.version>
         <jodd.version>3.3.2</jodd.version>
         <netty.version>4.1.48.Final</netty.version>
-
+        <jetcd-version>0.5.0</jetcd-version>
 
         <!-- encode -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,6 +67,11 @@
             <version>${netty.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.etcd</groupId>
+            <artifactId>jetcd-core</artifactId>
+            <version>${jetcd-version}</version>
+        </dependency>
     </dependencies>
 
     <build>
